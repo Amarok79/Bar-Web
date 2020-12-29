@@ -12,6 +12,13 @@ html, body {
 }
 
 
+.preview-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+
 .item-page-title {
   font-size: 36px;
   font-weight: bold;

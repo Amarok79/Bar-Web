@@ -61,7 +61,7 @@ namespace Bar.Web.Services
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
             );
 
-            if (dto == null || dto.Rums == null)
+            if (dto?.Rums == null)
             {
                 return Array.Empty<Rum>();
             }
