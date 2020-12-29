@@ -1,0 +1,54 @@
+﻿@inject IRumRepository Repository
+
+<p class="preview-title">Unsere Rums</p>
+
+<div class="item-container">
+    @if (mItems != null) {
+        @foreach (var item in mItems) {
+            <div class="item">
+                <img class="item-image" src="@(GetLowResImagePath(item.Image))"/>
+                <p class="item-title">@item.Name</p>
+                <p class="item-subtitle">@item.Teaser</p>
+            </div>
+        }
+    }
+</div>
+
+<a href="/rum" class="btn btn-dark" style="margin: 20px 0 0 0">Alle Rums</a>
+
+
+@code {
+
+    [CanBeNull]
+    IEnumerable<Rum> mItems;
+
+    protected override async Task OnInitializedAsync() {
+        mItems = await Repository.GetAllAsync();
+        mItems = TakeRandom(mItems, 4);
+    }
+
+    private static String GetLowResImagePath([CanBeNull] String image) {
+        return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/rum/low/{image}";
+    }
+
+
+    private static IEnumerable<T> TakeRandom<T>(IEnumerable<T> items, Int32 count) {
+        var used = new List<Int32>();
+        var result = new List<T>();
+        var random = new Random();
+        var total = items.Count();
+
+        while (result.Count != count) {
+            var index = random.Next(total);
+
+            if (used.Contains(index))
+                continue;
+
+            result.Add(items.Skip(index - 1).First());
+            used.Add(index);
+        }
+
+        return result;
+    }
+
+}
