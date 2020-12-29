@@ -1,0 +1,63 @@
+﻿@using JetBrains.Annotations
+<div class="page">
+
+    <!-- Header -->
+    <header class="header">
+        <div hidden="@(!HeaderVisible)">
+            <h1 class="header-text">@HeaderText</h1>
+            <h2 class="header-subtext">@HeaderSubText</h2>
+        </div>
+        <div class="header-image">
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div hidden="@(!BannerVisible)">
+            <h3 class="banner-text">@BannerText</h3>
+        </div>
+        <div class="banner-image">
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content">
+        @ChildContent
+    </section>
+    <div class="content-image">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        @FooterContent
+    </footer>
+
+</div>
+
+
+@code
+{
+    [Parameter]
+    public Boolean HeaderVisible { get; set; } = true;
+
+    [Parameter, CanBeNull]
+    public String HeaderText { get; set; } = "Die \"KroKo\" Hausbar";
+
+    [Parameter, CanBeNull]
+    public String HeaderSubText { get; set; } = "Cocktails und Drinks für Freunde und Gäste";
+
+
+    [Parameter]
+    public Boolean BannerVisible { get; set; } = false;
+
+    [Parameter, CanBeNull]
+    public String BannerText { get; set; }
+
+
+    [Parameter, CanBeNull]
+    public RenderFragment ChildContent { get; set; }
+
+
+    [Parameter, CanBeNull]
+    public RenderFragment FooterContent { get; set; }
+}

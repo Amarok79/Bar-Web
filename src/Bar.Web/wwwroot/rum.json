@@ -1,0 +1,112 @@
+﻿{
+  "rums": [
+    {
+      "name": "A.H. Riise Non Plus Ultra",
+      "teaser": "Very Rare Rum",
+      "tags": "Golden Rum",
+      "image": "KRO00416.jpg"
+    },
+    {
+      "name": "A.H. Riise X.O. Reserve",
+      "teaser": "Limited Edition, Port Cask Finish",
+      "tags": "Dark Rum",
+      "image": "KRO00441.jpg"
+    },
+    {
+      "name": "A.H. Riise X.O. Reserve",
+      "teaser": "Special Edition, Kong Haakon",
+      "tags": "Golden Rum",
+      "image": "KRO00442.jpg"
+    },
+    {
+      "name": "A.H. Riise X.O. Reserve",
+      "teaser": "Super Premium Single Barrel",
+      "tags": "Golden Rum",
+      "image": "KRO00444.jpg"
+    },
+    {
+      "name": "Appleton Estate Signature Blend",
+      "teaser": "Jamaica",
+      "tags": "Golden Rum",
+      "image": "KRO00422.jpg"
+    },
+    {
+      "name": "Clement Rhum Agricole",
+      "teaser": "Martinique",
+      "tags": "White Rum|Agricole Ruhm",
+      "image": "KRO00410.jpg"
+    },
+    {
+      "name": "Diplomatico Reserva Exclusiva",
+      "teaser": "Venezuela",
+      "tags": "Golden Rum",
+      "image": "KRO00411.jpg"
+    },
+    {
+      "name": "Don Papa",
+      "teaser": "Philippines",
+      "tags": "Golden Rum",
+      "image": "KRO00420.jpg"
+    },
+    {
+      "name": "Dos Maderas 5+5",
+      "teaser": "Guyana, Barbados",
+      "tags": "Dark Rum",
+      "image": "KRO00428.jpg"
+    },
+    {
+      "name": "J. Wray Silver Rum",
+      "teaser": "Jamaica",
+      "tags": "White Rum",
+      "image": "KRO00436.jpg"
+    },
+    {
+      "name": "Mezan",
+      "teaser": "Jamaica",
+      "tags": "Golden Rum",
+      "image": "KRO00426.jpg"
+    },
+    {
+      "name": "O•Rum",
+      "teaser": "Österreich",
+      "tags": "Dark Rum",
+      "image": "KRO00405.jpg"
+    },
+    {
+      "name": "Old Pascas",
+      "teaser": "Barbados",
+      "tags": "Dark Rum",
+      "image": "KRO00446.jpg"
+    },
+    {
+      "name": "Plantation 3 Stars",
+      "teaser": "Jamaica, Barbados, Trinidad",
+      "tags": "White Rum",
+      "image": "KRO00438.jpg"
+    },
+    {
+      "name": "Plantation Black Cask",
+      "teaser": "Trinidad, Belize, Barbados",
+      "tags": "Golden Rum",
+      "image": "KRO00414.jpg"
+    },
+    {
+      "name": "Plantation XO 20th Anniversary",
+      "teaser": "Barbados",
+      "tags": "Dark Rum",
+      "image": "KRO00431.jpg"
+    },
+    {
+      "name": "Ron Barcelo Gran Añejo",
+      "teaser": "Dominikanische Republik",
+      "tags": "Golden Rum",
+      "image": "KRO00419.jpg"
+    },
+    {
+      "name": "Santiago de Cuba",
+      "teaser": "12 Year Old Extra Añejo",
+      "tags": "Golden Rum",
+      "image": "KRO00429.jpg"
+    }
+  ]
+}
