@@ -11,7 +11,7 @@
         @if (mItems != null) {
             @foreach (var item in mItems) {
                 <div class="item">
-                    <img class="item-image" src="@(GetLowResImagePath(item.Image))"/>
+                    <img class="item-image" src="@(Utils.GetLowResGinImagePath(item.Image))"/>
                     <p class="item-title">@item.Name</p>
                     <p class="item-subtitle">@item.Teaser</p>
                 </div>
@@ -24,15 +24,10 @@
 
 @code {
 
-    [CanBeNull]
     IEnumerable<Gin> mItems;
 
     protected override async Task OnInitializedAsync() {
         mItems = await Repository.GetAllAsync();
-    }
-
-    private static String GetLowResImagePath([CanBeNull] String image) {
-        return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/gin/low/{image}";
     }
 
 }
