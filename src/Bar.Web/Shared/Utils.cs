@@ -31,14 +31,19 @@ namespace Bar.Web.Shared
 {
     public static class Utils
     {
-        public static String GetLowResRumImagePath(String image)
+        public static String GetLowResDrinkImagePath(String image)
         {
-            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/rum/low/{image}";
+            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/drink/low/{image}";
         }
 
         public static String GetLowResGinImagePath(String image)
         {
             return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/gin/low/{image}";
+        }
+
+        public static String GetLowResRumImagePath(String image)
+        {
+            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/rum/low/{image}";
         }
 
         public static IEnumerable<T> TakeRandom<T>(this IEnumerable<T> items, Int32 count)
