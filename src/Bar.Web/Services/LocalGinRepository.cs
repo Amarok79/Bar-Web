@@ -1,4 +1,4 @@
-/* MIT License
+﻿/* MIT License
  * 
  * Copyright (c) 2020, Olaf Kober
  * https://github.com/Amarok79/Bar-Web
@@ -22,59 +22,58 @@
  * SOFTWARE.
  */
 
-using Bar.Web.Services;
-using Microsoft.AspNetCore.Builder;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text.Json;
+using System.Threading.Tasks;
+using JetBrains.Annotations;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 
-namespace Bar.Web
+namespace Bar.Web.Services
 {
-    public class Startup
+    internal sealed class LocalGinRepository : IGinRepository
     {
-        public IConfiguration Configuration { get; }
+        private readonly IWebHostEnvironment mWebHostEnvironment;
 
 
-        public Startup(IConfiguration configuration)
+        public LocalGinRepository(IWebHostEnvironment webHostEnvironment)
         {
-            Configuration = configuration;
+            mWebHostEnvironment = webHostEnvironment;
         }
 
 
-        public void ConfigureServices(IServiceCollection services)
+        public async Task<IEnumerable<Gin>> GetAllAsync()
         {
-            services.AddRazorPages();
-            services.AddServerSideBlazor();
+            var fileInfo = mWebHostEnvironment.WebRootFileProvider.GetFileInfo("gin.json");
 
-            services.AddTransient(typeof(IRumRepository), typeof(LocalRumRepository));
-            services.AddTransient(typeof(IGinRepository), typeof(LocalGinRepository));
-        }
-
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
+            if (!fileInfo.Exists)
             {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-                app.UseHsts();
+                return Array.Empty<Gin>();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            await using var stream = File.OpenRead(fileInfo.PhysicalPath);
 
-            app.UseRouting();
-
-            app.UseEndpoints(
-                endpoints => {
-                    endpoints.MapBlazorHub();
-                    endpoints.MapFallbackToPage("/_Host");
-                }
+            var dto = await JsonSerializer.DeserializeAsync<GinsDto>(
+                stream,
+                new JsonSerializerOptions { PropertyNameCaseInsensitive = true }
             );
+
+            if (dto?.Gins == null)
+            {
+                return Array.Empty<Gin>();
+            }
+
+            return dto.Gins.OrderBy(x => x.Name);
+        }
+
+
+        [UsedImplicitly]
+        private sealed class GinsDto
+        {
+            public IEnumerable<Gin> Gins { get; set; }
         }
     }
 }
