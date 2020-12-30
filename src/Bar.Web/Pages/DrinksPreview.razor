@@ -1,0 +1,29 @@
+﻿@inject IDrinkRepository Repository
+
+<p class="preview-title">Unsere Cocktails</p>
+
+<div class="item-container">
+    @if (mItems != null) {
+        @foreach (var item in mItems) {
+            <div class="item">
+                <img class="item-image" src="@(Utils.GetLowResDrinkImagePath(item.Image))"/>
+                <p class="item-title">@item.Name</p>
+                <p class="item-subtitle">@item.Teaser</p>
+            </div>
+        }
+    }
+</div>
+
+<a href="/cocktail" class="btn btn-dark" style="margin: 20px 0 40px 0">Alle Cocktails</a>
+
+
+@code {
+
+    IEnumerable<Drink> mItems;
+
+    protected override async Task OnInitializedAsync() {
+        var id = new BarId(Guid.Empty);
+        mItems = ( await Repository.GetAllAsync(id) ).TakeRandom(4);
+    }
+
+}

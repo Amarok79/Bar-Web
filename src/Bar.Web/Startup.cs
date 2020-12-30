@@ -50,6 +50,7 @@ namespace Bar.Web
 
             services.AddTransient(typeof(IRumRepository), typeof(LocalRumRepository));
             services.AddTransient(typeof(IGinRepository), typeof(LocalGinRepository));
+            services.AddTransient(typeof(IDrinkRepository), typeof(LocalDrinkRepository));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
