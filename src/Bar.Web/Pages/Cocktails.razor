@@ -27,6 +27,8 @@
     IEnumerable<Drink> mItems;
 
     protected override async Task OnInitializedAsync() {
+        mItems = Utils.CreateEmptyDrinks();
+        await Task.Delay(50);
         var id = new BarId(Guid.Empty);
         mItems = await Repository.GetAllAsync(id);
     }

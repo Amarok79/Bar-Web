@@ -27,6 +27,8 @@
     IEnumerable<Gin> mItems;
 
     protected override async Task OnInitializedAsync() {
+        mItems = Utils.CreateEmptyGins();
+        await Task.Delay(50);
         mItems = await Repository.GetAllAsync();
     }
 

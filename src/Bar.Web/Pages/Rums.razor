@@ -27,6 +27,8 @@
     IEnumerable<Rum> mItems;
 
     protected override async Task OnInitializedAsync() {
+        mItems = Utils.CreateEmptyRums();
+        await Task.Delay(50);
         mItems = await Repository.GetAllAsync();
     }
 
