@@ -5,6 +5,7 @@
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<OutputPath>..\..\bin\app\</OutputPath>
 		<Nullable>disable</Nullable>
+		<UserSecretsId>1f3112d4-b310-417f-89cc-2a21620da825</UserSecretsId>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
