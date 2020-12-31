@@ -25,6 +25,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Bar.Web.Services;
 
 
 namespace Bar.Web.Shared
@@ -67,6 +68,21 @@ namespace Bar.Web.Shared
             }
 
             return result;
+        }
+
+        public static IEnumerable<Drink> CreateEmptyDrinks(Int32 count = 4)
+        {
+            return Enumerable.Repeat(new Drink(default, default), count);
+        }
+
+        public static IEnumerable<Gin> CreateEmptyGins(Int32 count = 4)
+        {
+            return Enumerable.Repeat(new Gin(), count);
+        }
+
+        public static IEnumerable<Rum> CreateEmptyRums(Int32 count = 4)
+        {
+            return Enumerable.Repeat(new Rum(), count);
         }
     }
 }
