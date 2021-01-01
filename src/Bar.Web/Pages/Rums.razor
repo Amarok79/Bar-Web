@@ -3,21 +3,27 @@
 
 <PageLayout HeaderVisible="false" BannerVisible="true" BannerText="Rum">
 
-    <p class="item-page-title">Unser Rum Sortiment</p>
+    <ChildContent>
+        <p class="item-page-title">Unser Rum Sortiment</p>
 
-    <p class="item-page-subtitle">Rum oder Rhum. Hauptsache genießen.</p>
+        <p class="item-page-subtitle">Rum oder Rhum. Hauptsache genießen.</p>
 
-    <div class="item-container">
-        @if (mItems != null) {
-            @foreach (var item in mItems) {
-                <div class="item">
-                    <img class="item-image" src="@(Utils.GetLowResRumImagePath(item.Image))"/>
-                    <p class="item-title">@item.Name</p>
-                    <p class="item-subtitle">@item.Teaser</p>
-                </div>
+        <div class="item-container">
+            @if (mItems != null) {
+                @foreach (var item in mItems) {
+                    <div class="item">
+                        <img class="item-image" src="@(Utils.GetLowResRumImagePath(item.Image))"/>
+                        <p class="item-title">@item.Name</p>
+                        <p class="item-subtitle">@item.Teaser</p>
+                    </div>
+                }
             }
-        }
-    </div>
+        </div>
+    </ChildContent>
+
+    <FooterContent>
+        <Navigation/>
+    </FooterContent>
 
 </PageLayout>
 
