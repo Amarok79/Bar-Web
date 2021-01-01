@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<OutputPath>..\..\bin\app\</OutputPath>
+		<Nullable>disable</Nullable>
+		<UserSecretsId>1f3112d4-b310-417f-89cc-2a21620da825</UserSecretsId>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\Bar.licenseheader" Link="Bar.licenseheader" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Amarok.Contracts" Version="2.0.0" />
+		<PackageReference Include="JetBrains.Annotations" Version="2020.3.0" />
+	</ItemGroup>
+
+</Project>
