@@ -79,13 +79,19 @@ html, body {
   padding: 20px 80px 20px 80px;
 }
 
+@media screen and (max-width: 600px) {
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 
 .footer {
   background: #444238;
   color: white;
   min-height: 100px;
 }
-
 
 .footer-image {
   background: #444238;
@@ -97,6 +103,13 @@ html, body {
 
 .footer-content {
   padding: 20px 80px 60px 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .footer-text {
@@ -147,6 +160,12 @@ html, body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .item-container {
+    align-items: center;
+  }
 }
 
 .item {
