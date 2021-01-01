@@ -107,11 +107,20 @@ html, body {
   text-align: left;
 }
 
-.footer-subtext {
+.footer-navlist {
+  list-style-type: circle
+}
+
+.footer-subtext-link {
   color: white;
   font-size: 22px;
   margin: 20px 0 20px 10px;
   text-align: left;
+}
+
+.footer-subtext-link:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 
