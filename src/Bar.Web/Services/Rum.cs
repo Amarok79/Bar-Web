@@ -27,10 +27,24 @@ using System;
 
 namespace Bar.Web.Services
 {
+    /// <summary>
+    /// Represents a Rum.
+    /// </summary>
     public sealed class Rum
     {
+        /// <summary>
+        /// The name of the Rum, e.g. "A.H. Riise X.O. Reserve".
+        /// </summary>
         public String Name { get; set; }
+
+        /// <summary>
+        /// A teaser text of the Rum, e.g. "Special Edition, Kong Haakon".
+        /// </summary>
         public String Teaser { get; set; }
+
+        /// <summary>
+        /// The image file name of the Rum, e.g. "KRO00442.jpg".
+        /// </summary>
         public String Image { get; set; }
     }
 }
