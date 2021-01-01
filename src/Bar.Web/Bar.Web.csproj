@@ -15,6 +15,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<None Include="..\..\.github\workflows\main.yml" Link="main.yml" />
 		<None Include="..\Bar.licenseheader" Link="Bar.licenseheader" />
 	</ItemGroup>
 
