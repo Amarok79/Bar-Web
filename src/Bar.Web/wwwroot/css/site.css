@@ -1,0 +1,232 @@
+/* Global */
+
+@font-face {
+  font-family: 'LoveYaLikeASister';
+  src: url('LoveYaLikeASister.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'LoveYaLikeASister';
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+/* Page Layout */
+
+.header {
+  background: #444238;
+}
+
+.header-text {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 30px 0 30px 0;
+  text-align: center;
+}
+
+.header-subtext {
+  color: white;
+  font-size: 22px;
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.header-image {
+  background: #F7D85F;
+  background-image: url("/images/head_bg.png");
+  background-position: center top;
+  background-repeat: repeat-x;
+  height: 60px;
+}
+
+
+.banner {
+  background: #F7D85F;
+  min-height: 20px;
+}
+
+.banner-text {
+  color: #444238;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 30px 0 30px 0;
+  text-align: center;
+}
+
+.banner-image {
+  background: #F75F5F;
+  background-image: url("/images/banner_bg.png");
+  background-position: center top;
+  background-repeat: repeat-x;
+  height: 60px;
+}
+
+
+.content {
+  background: #F75F5F;
+  color: white;
+  min-height: 400px;
+  padding: 20px 80px 20px 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+.footer {
+  background: #444238;
+  color: white;
+  min-height: 100px;
+}
+
+.footer-image {
+  background: #444238;
+  background-image: url("/images/footer_bg.png");
+  background-position: center top;
+  background-repeat: repeat-x;
+  height: 60px;
+}
+
+.footer-content {
+  padding: 20px 80px 60px 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-content {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.footer-text {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin: 30px 0 30px 0;
+  text-align: left;
+}
+
+.footer-navlist {
+  list-style-type: circle
+}
+
+.footer-subtext-link {
+  color: white;
+  font-size: 22px;
+  margin: 20px 0 20px 10px;
+  text-align: left;
+}
+
+.footer-subtext-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+
+/* Page Contents */
+
+.preview-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+}
+
+
+.item-page-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 20px 0 20px 0;
+}
+
+.item-page-subtitle {
+  font-size: 24px;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .item-container {
+    align-items: center;
+  }
+}
+
+.item {
+  background: white;
+  height: 400px;
+  margin: 20px 20px 0 0;
+  position: relative;
+  width: 300px;
+}
+
+.item-image {
+  border-color: white;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.item-image:hover {
+  /*opacity: 0.7;*/
+}
+
+.item-title {
+  bottom: 24px;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 12px 12px;
+  position: absolute;
+  text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
+}
+
+.item-subtitle {
+  bottom: 0;
+  font-size: 14px;
+  margin: 12px 12px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 280px;
+}
+
+
+/* Error Handling */
+
+#blazor-error-ui {
+  background: lightyellow;
+  bottom: 0;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+  display: none;
+  left: 0;
+  padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+  cursor: pointer;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.5rem;
+}

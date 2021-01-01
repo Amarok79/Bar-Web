@@ -1,0 +1,42 @@
+﻿@page "/cocktails"
+@inject IDrinkRepository Repository
+
+<PageLayout HeaderVisible="false" BannerVisible="true" BannerText="Cocktails">
+
+    <ChildContent>
+        <p class="item-page-title">Unsere Cocktails</p>
+
+        <p class="item-page-subtitle">Mit frischen Säften und edlen Spirituosen gemixt.</p>
+
+        <div class="item-container">
+            @if (mItems != null) {
+                @foreach (var item in mItems) {
+                    <div class="item">
+                        <img class="item-image" src="@(Utils.GetLowResDrinkImagePath(item.Image))"/>
+                        <p class="item-title">@item.Name</p>
+                        <p class="item-subtitle">@item.Teaser</p>
+                    </div>
+                }
+            }
+        </div>
+    </ChildContent>
+
+    <FooterContent>
+        <Navigation/>
+    </FooterContent>
+
+</PageLayout>
+
+
+@code {
+
+    IEnumerable<Drink> mItems;
+
+    protected override async Task OnInitializedAsync() {
+        mItems = Utils.CreateEmptyDrinks();
+        await Task.Delay(50);
+        var id = new BarId(Guid.Empty);
+        mItems = await Repository.GetAllAsync(id);
+    }
+
+}
