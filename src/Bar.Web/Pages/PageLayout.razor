@@ -1,6 +1,5 @@
 ﻿<div class="page">
 
-    <!-- Header -->
     <header class="header">
         <div hidden="@(!HeaderVisible)">
             <h1 class="header-text">@HeaderText</h1>
@@ -10,7 +9,6 @@
         </div>
     </header>
 
-    <!-- Banner -->
     <section class="banner">
         <div hidden="@(!BannerVisible)">
             <h3 class="banner-text">@BannerText</h3>
@@ -19,29 +17,16 @@
         </div>
     </section>
 
-    <!-- Content -->
     <section class="content">
         @ChildContent
     </section>
-    <div class="content-image">
-    </div>
 
-    <!-- Footer -->
     <footer class="footer">
-        <h1 class="footer-text">Navigation</h1>
-        <a href="/">
-            <h2 class="footer-subtext">&#x2023; Startseite</h2>
-        </a>
-        <a href="@Urls.Cocktails">
-            <h2 class="footer-subtext">&#x2023; Cocktails</h2>
-        </a>
-        <a href="@Urls.Gins">
-            <h2 class="footer-subtext">&#x2023; Gins</h2>
-        </a>
-        <a href="@Urls.Rums">
-            <h2 class="footer-subtext">&#x2023; Rums</h2>
-        </a>
-        @FooterContent
+        <div class="footer-image">
+        </div>
+        <div class="footer-content">
+            @FooterContent
+        </div>
     </footer>
 
 </div>
