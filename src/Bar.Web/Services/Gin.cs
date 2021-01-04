@@ -23,6 +23,8 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace Bar.Web.Services
@@ -31,6 +33,7 @@ namespace Bar.Web.Services
     {
         public String Name { get; set; }
         public String Teaser { get; set; }
-        public String Image { get; set; }
+        public IList<String> Images { get; set; }
+        public String Image => Images?.FirstOrDefault();
     }
 }
