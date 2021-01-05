@@ -47,6 +47,7 @@ namespace Bar.Web
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_CONNECTIONSTRING"]);
 
             services.AddTransient(typeof(IRumRepository), typeof(LocalRumRepository));
             services.AddTransient(typeof(IGinRepository), typeof(LocalGinRepository));
