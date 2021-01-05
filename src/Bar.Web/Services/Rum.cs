@@ -23,6 +23,8 @@
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 
 namespace Bar.Web.Services
@@ -43,8 +45,13 @@ namespace Bar.Web.Services
         public String Teaser { get; set; }
 
         /// <summary>
-        /// The image file name of the Rum, e.g. "KRO00442.jpg".
+        /// A list of image file names of the Rum, e.g. "KRO00442.jpg".
         /// </summary>
-        public String Image { get; set; }
+        public IList<String> Images { get; set; }
+
+        /// <summary>
+        /// The main image file name of the Rum, e.g. "KRO00442.jpg".
+        /// </summary>
+        public String Image => Images?.FirstOrDefault();
     }
 }
