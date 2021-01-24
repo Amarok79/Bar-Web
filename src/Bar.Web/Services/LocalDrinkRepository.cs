@@ -81,6 +81,7 @@ namespace Bar.Web.Services
 
             foreach (var drinkNode in catalogNode.Element("drinks").Elements("drink"))
             {
+                var id      = drinkNode.Element("id").Value;
                 var name    = drinkNode.Element("name").Value;
                 var teaser  = drinkNode.Element("teaser").Value;
                 var image   = drinkNode.Element("image").Value;
@@ -90,7 +91,7 @@ namespace Bar.Web.Services
                 var ice     = drinkNode.Element("ice")?.Value;
                 var garnish = drinkNode.Element("garnish")?.Value;
 
-                var drink = new Drink(new DrinkId(Guid.NewGuid()), barId).SetName(name.Trim())
+                var drink = new Drink(new DrinkId(new Guid(id)), barId).SetName(name.Trim())
                    .SetTeaser(teaser.Trim())
                    .SetImage(image)
                    .SetDescription(_TrimDescription(desc))
