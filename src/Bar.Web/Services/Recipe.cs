@@ -71,16 +71,12 @@ namespace Bar.Web.Services
             sb.AppendLine("Ingredients:");
 
             foreach (var ingredient in Ingredients)
-            {
                 sb.AppendLine(ingredient.ToString());
-            }
 
             sb.AppendLine("Instructions:");
 
             foreach (var instruction in Instructions)
-            {
                 sb.AppendLine(instruction);
-            }
 
             return sb.ToString();
         }

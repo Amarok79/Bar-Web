@@ -82,9 +82,7 @@ namespace Bar.Web.Services
         public override String ToString()
         {
             if (Amount.HasValue)
-            {
                 return $"{Amount} {Unit} {Substance}";
-            }
 
             return Substance;
         }

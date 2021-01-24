@@ -59,9 +59,7 @@ namespace Bar.Web.Shared
                 var index = random.Next(total);
 
                 if (used.Contains(index))
-                {
                     continue;
-                }
 
                 result.Add(items.Skip(index - 1).First());
                 used.Add(index);
