@@ -57,6 +57,7 @@
 	<drinks>
 
 		<drink>
+			<id>81765525-a1cd-4c1a-a10c-9075d412bc5f</id>
 			<name>Alexander</name>
 			<teaser>Gin, Crème de Cacao, Sahne, Muskatnuss</teaser>
 			<image>KRO00298.jpg</image>
@@ -85,6 +86,7 @@
 		</drink>
 
 		<drink>
+			<id>a89e55cb-ab97-41d0-b3ad-012dd3387983</id>
 			<name>Amaretto Sour</name>
 			<teaser>Amaretto, Zitronensaft, Orangensaft</teaser>
 			<image>KRO00033.jpg</image>
@@ -113,6 +115,7 @@
 		</drink>
 
 		<drink>
+			<id>b7ea4901-f95b-4cbe-8062-52e8df0a4819</id>
 			<name>Americano</name>
 			<teaser>Campari, Vermouth Rosso, Soda</teaser>
 			<image>KRO00534.jpg</image>
@@ -138,6 +141,7 @@
 		</drink>
 
 		<drink>
+			<id>9392e2d0-6949-496c-b241-2daec437dc2e</id>
 			<name>Averna Sour</name>
 			<teaser>Averna, Zitronensaft, Orangensaft</teaser>
 			<image>KRO00065.jpg</image>
@@ -165,6 +169,7 @@
 		</drink>
 
 		<drink>
+			<id>2800a8a8-9c0e-4ae0-819f-81f79083d7fc</id>
 			<name>Aviation</name>
 			<teaser>Gin, Zitronensaft, Maraschino, Crème de Violette</teaser>
 			<image>KRO00526.jpg</image>
@@ -191,6 +196,7 @@
 		</drink>
 
 		<drink>
+			<id>1d51d843-7583-4848-903d-f8af5c720a54</id>
 			<name>B52</name>
 			<teaser>Kahlua, Baileys, Grand Marnier</teaser>
 			<image>KRO00192.jpg</image>
@@ -218,6 +224,7 @@
 		</drink>
 
 		<drink>
+			<id>f32a1c5c-df0e-4106-ac68-f63185c8029a</id>
 			<name>Batida de Maracuja</name>
 			<teaser>Cachaça, Passionsfrucht, Kokosmilch</teaser>
 			<image>KRO00538.jpg</image>
@@ -243,6 +250,7 @@
 		</drink>
 
 		<drink>
+			<id>1df0c44d-bc30-4321-ab87-259fa6ebe6b7</id>
 			<name>Bellevue</name>
 			<teaser>Rum, Cointreau, Cream of Coconut, Ananassaft</teaser>
 			<image>KRO00123.jpg</image>
@@ -265,6 +273,7 @@
 		</drink>
 
 		<drink>
+			<id>bc189268-befa-4bfe-8325-7218ac0c4816</id>
 			<name>Bramble</name>
 			<teaser>Gin, Zitronensaft, Brombeerlikör</teaser>
 			<image>KRO00454.jpg</image>
@@ -291,6 +300,7 @@
 		</drink>
 
 		<drink>
+			<id>c6273a25-7ea6-4aa9-b1b8-e0d8fce6aa4e</id>
 			<name>Caipirinha</name>
 			<teaser>Cachaça, Limette, Rohrzucker</teaser>
 			<image>KRO00293.jpg</image>
@@ -326,6 +336,7 @@
 		</drink>
 
 		<drink>
+			<id>4d0a5d88-aebd-406d-bd0d-e30f80f1bac5</id>
 			<name>Caipirinha &amp; Passion</name>
 			<teaser>Cachaça, Limette, Passionsfrucht, Rohrzucker</teaser>
 			<image>KRO00553.jpg</image>
@@ -365,6 +376,7 @@
 		</drink>
 
 		<drink>
+			<id>a419dd50-16a8-4174-b46b-b0f28e658576</id>
 			<name>Cosmopolitan</name>
 			<teaser>Wodka, Cointreau, Cranberrysaft, Limettensaft</teaser>
 			<image>KRO00006.jpg</image>
@@ -393,6 +405,7 @@
 		</drink>
 
 		<drink>
+			<id>9c0e4dae-8ac8-4166-9303-0a784cb73909</id>
 			<name>Cuba Libre</name>
 			<teaser>Rum, Limette, Coca Cola</teaser>
 			<image>KRO00041.jpg</image>
@@ -420,6 +433,7 @@
 		</drink>
 
 		<drink>
+			<id>c9f37b9e-e8d4-45ea-9696-1072cd4eb922</id>
 			<name>Dark &amp; Stormy</name>
 			<teaser>Rum, Ginger Beer, Limettensaft</teaser>
 			<image>KRO00518.jpg</image>
@@ -444,6 +458,7 @@
 		</drink>
 
 		<drink>
+			<id>10cccda1-797f-450e-818d-e629e2603658</id>
 			<name>Gamble</name>
 			<teaser>Sloe Gin, Grapefruitsaft, Kirschlikör</teaser>
 			<image>KRO00005.jpg</image>
@@ -468,6 +483,7 @@
 		</drink>
 
 		<drink>
+			<id>334948f5-4b3a-4288-bd02-47237d4586b0</id>
 			<name>Gin &amp; Sin</name>
 			<teaser>Gin, Zitronensaft, Orangensaft, Grenadine</teaser>
 			<image>KRO00312.jpg</image>
@@ -489,6 +505,7 @@
 		</drink>
 
 		<drink>
+			<id>6397dafb-a4ad-421e-bdd8-d622adb0e9ed</id>
 			<name>Gin &amp; Tonic</name>
 			<teaser>Gin, Tonic Water</teaser>
 			<image>KRO00794.jpg</image>
@@ -539,6 +556,7 @@
 		</drink>
 
 		<drink>
+			<id>cb15a6a6-1297-4959-b55b-d577020bc528</id>
 			<name>Horse's Neck with a Kick</name>
 			<teaser>Bourbon Whiskey, Ginger Ale</teaser>
 			<image>KRO00106.jpg</image>
@@ -562,6 +580,7 @@
 		</drink>
 
 		<drink>
+			<id>2aae14c1-5470-48f9-8d55-cbc90c499708</id>
 			<name>Leapfrog</name>
 			<teaser>Gin, Zitronensaft, Ginger Ale</teaser>
 			<image>KRO00560.jpg</image>
@@ -588,6 +607,7 @@
 
 
 		<drink>
+			<id>fc4518b9-36a7-4bcb-b181-7ce5b4b94268</id>
 			<name>Long Island Iced Tea</name>
 			<teaser>Vodka, Gin, Tequilla, Rum, Triple Sec, Limettensaft, Cola</teaser>
 			<image>KRO00004.jpg</image>
@@ -613,6 +633,7 @@
 
 
 		<drink>
+			<id>6e051cea-e903-44c5-b84e-c550a88216dd</id>
 			<name>Mai Tai</name>
 			<teaser>Rum, Cointreau, Mandellikör, Limettensaft, Muskatnuss</teaser>
 			<image>KRO00252.jpg</image>
@@ -637,6 +658,7 @@
 		</drink>
 
 		<drink>
+			<id>8c77cfa5-f38f-4ad8-a90a-758415b61845</id>
 			<name>Martinez (Gin)</name>
 			<teaser>Old Tom Gin, Vermouth, Maraschino</teaser>
 			<image>KRO00207.jpg</image>
@@ -656,6 +678,7 @@
 		</drink>
 
 		<drink>
+			<id>047d58be-df75-432f-b9a6-789980d3f06b</id>
 			<name>Mojito</name>
 			<teaser>Weißer Rum, Limettensaft, Minze, Soda</teaser>
 			<image>KRO00327.jpg</image>
@@ -678,6 +701,7 @@
 
 
 		<drink>
+			<id>4d594c7d-74b1-45fb-ad38-04bc82db7f49</id>
 			<name>Negroni</name>
 			<teaser>Gin, Campari, Vermouth Rosso</teaser>
 			<image>KRO00079.jpg</image>
@@ -700,6 +724,7 @@
 
 
 		<drink>
+			<id>9d737331-6a74-4f10-af3e-89dfae9229a5</id>
 			<name>Old Fashioned</name>
 			<teaser>Bourbon Whiskey, Bitters</teaser>
 			<image></image>
@@ -722,6 +747,7 @@
 
 
 		<drink>
+			<id>06d719ca-1a1d-4280-aa9b-39f428511289</id>
 			<name>Piña Colada</name>
 			<teaser>Rum, Limettensaft, Creme of Coconut, Ananassaft</teaser>
 			<image>KRO00295.jpg</image>
@@ -744,6 +770,7 @@
 		</drink>
 
 		<drink>
+			<id>a3005880-64dd-4490-99ac-28ed6a2ec1dc</id>
 			<name>Prince</name>
 			<teaser>Tequilla, Vanillelikör, Creme of Coconut, Sahne, Maracujasaft</teaser>
 			<image>KRO00138.jpg</image>
@@ -762,6 +789,7 @@
 
 
 		<drink>
+			<id>f383a052-dc28-4569-9991-a4d832d66515</id>
 			<name>Ramazotti Sour</name>
 			<teaser>Ramazotti, Zitronensaft, Orangensaft</teaser>
 			<image>KRO00093.jpg</image>
@@ -782,6 +810,7 @@
 		</drink>
 
 		<drink>
+			<id>3c743ef3-5068-43c6-bf84-b0ad277d12c3</id>
 			<name>Rosa Lady</name>
 			<teaser>Wodka, Vanillelikör, Bananenlikör, Sahne, Maracujasaft, Ananassaft</teaser>
 			<image>KRO00161.jpg</image>
@@ -803,6 +832,7 @@
 
 
 		<drink>
+			<id>1977b312-8d98-4dcc-b5de-704f4d9dc0fe</id>
 			<name>Singapore Sling</name>
 			<teaser>Gin, Limettensaft, Kirschlikör, Cointreau, Benedictine, Ananassaft</teaser>
 			<image>KRO00221.jpg</image>
@@ -829,6 +859,7 @@
 		</drink>
 
 		<drink>
+			<id>5ca528c7-d197-4834-9e3b-3eeca8467779</id>
 			<name>Saturn</name>
 			<teaser>Gin, Limettensaft, Falerum, Orgeat, Maracujasirup</teaser>
 			<image>KRO00003.jpg</image>
@@ -846,6 +877,7 @@
 		</drink>
 
 		<drink>
+			<id>3831aaaf-3c75-4981-b951-7a2057f73350</id>
 			<name>Moscow Mule</name>
 			<teaser>Wodka, Ginger Beer, Limettensaft, Minze</teaser>
 			<image>KRO00805.jpg</image>
@@ -861,6 +893,7 @@
 
 
 		<drink>
+			<id>8c995fe0-9409-45ec-9848-6e30b02a355c</id>
 			<name>White Russian</name>
 			<teaser>Wodka, Kaffeelikör, Sahne</teaser>
 			<image>KRO00081.jpg</image>
@@ -882,6 +915,7 @@
 
 
 		<drink>
+			<id>bcd3df96-8232-4a43-b1a8-bdb88cc009f9</id>
 			<name>Zombie</name>
 			<teaser>Rum, Limettensaft, Falernum, Maraschino</teaser>
 			<image>KRO00002.jpg</image>
@@ -914,6 +948,7 @@
 
 
 		<!--<drink>
+			<id>cdc2cc6f-3375-4369-9521-f6228bc48d69</id>
 			<name>Italian Lover</name>
 			<teaser>Brandy, Baileys, Amaretto, Sahne</teaser>
 			<image>KRO00.jpg</image>
@@ -929,6 +964,7 @@
 		</drink>-->
 
 		<!--<drink>
+			<id>9659be23-9c54-44a9-ac2b-4f7b9875601f</id>
 			<name>Jet Pilot</name>
 			<teaser>Rum, Zimt, Graipefruitsaft, Limettensaft</teaser>
 			<image>KRO00233.jpg</image>
