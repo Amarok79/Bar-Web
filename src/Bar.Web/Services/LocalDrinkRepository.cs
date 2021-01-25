@@ -91,7 +91,10 @@ namespace Bar.Web.Services
                 var ice     = drinkNode.Element("ice")?.Value;
                 var garnish = drinkNode.Element("garnish")?.Value;
 
+                var key = _MakeKey(name);
+
                 var drink = new Drink(new DrinkId(new Guid(id)), barId).SetName(name.Trim())
+                   .SetKey(key)
                    .SetTeaser(teaser.Trim())
                    .SetImage(image)
                    .SetDescription(_TrimDescription(desc))
@@ -145,6 +148,11 @@ namespace Bar.Web.Services
             }
 
             return drinks;
+        }
+
+        private static String _MakeKey(String name)
+        {
+            return name.Replace(" ", "-").Replace("&", "").Replace("'", "").Replace("(", "").Replace(")", "").ToLower();
         }
 
         private static String _TrimDescription(String text)
