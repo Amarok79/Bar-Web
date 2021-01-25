@@ -176,6 +176,14 @@ html, body {
   width: 300px;
 }
 
+.item-clickable {
+  cursor: pointer;
+}
+
+.item-clickable:hover {
+  opacity: 0.7;
+}
+
 .item-image {
   border-color: white;
   border-radius: 5px;
