@@ -152,7 +152,14 @@ namespace Bar.Web.Services
 
         private static String _MakeKey(String name)
         {
-            return name.Replace(" ", "-").Replace("&", "").Replace("'", "").Replace("(", "").Replace(")", "").ToLower();
+            return name.Replace("  ", " ")
+               .Replace(" ", "-")
+               .Replace("&", "")
+               .Replace("'", "")
+               .Replace("(", "")
+               .Replace(")", "")
+               .Replace("--", "-")
+               .ToLower();
         }
 
         private static String _TrimDescription(String text)
