@@ -1,0 +1,31 @@
+﻿@page "/cocktail/{key}"
+@inject IDrinkRepository Repository
+@inject NavigationManager NavigationManager
+
+
+<PageLayout HeaderVisible="false" BannerVisible="true" BannerText="@mDrink?.Name">
+
+    <ChildContent>
+    </ChildContent>
+
+    <FooterContent>
+        <Navigation/>
+    </FooterContent>
+
+</PageLayout>
+
+
+@code {
+
+    [Parameter]
+    public String Key { get; set; }
+
+    private Drink mDrink;
+
+    protected override async Task OnInitializedAsync() {
+        var barId = new BarId(Guid.Empty);
+        IEnumerable<Drink> drinks = await Repository.GetAllAsync(barId);
+        mDrink = drinks.FirstOrDefault(x => x.Key.Equals(Key, StringComparison.OrdinalIgnoreCase));
+    }
+
+}
