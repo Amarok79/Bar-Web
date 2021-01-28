@@ -37,6 +37,11 @@ namespace Bar.Web.Shared
             return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/drink/low/{image}";
         }
 
+        public static String GetHighResDrinkImagePath(String image)
+        {
+            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/drink/high/{image}";
+        }
+
         public static String GetLowResGinImagePath(String image)
         {
             return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/gin/low/{image}";
