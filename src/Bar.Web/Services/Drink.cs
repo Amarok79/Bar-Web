@@ -246,5 +246,17 @@ namespace Bar.Web.Services
 
             return this;
         }
+
+
+        /// <summary>
+        /// </summary>
+        public String GetTranslatedIce()
+        {
+            return Ice switch {
+                "Cubed"   => "Würfel",
+                "Crushed" => "Gestoßen",
+                _         => "-",
+            };
+        }
     }
 }
