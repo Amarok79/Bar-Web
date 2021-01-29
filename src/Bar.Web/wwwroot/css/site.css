@@ -226,9 +226,23 @@ html, body {
   border-width: 8px;
   float: left;
   height: 35%;
-  margin: 40px 100px 0 0;
+  margin: 40px 100px 60px 0;
   transform: rotate(-3deg);
   width: 35%;
+}
+
+@media screen and (max-width: 600px) {
+  .detail-image {
+    border-color: white;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 8px;
+    float: left;
+    height: 80%;
+    margin: 40px 100px 60px 20px;
+    transform: rotate(-3deg);
+    width: 80%;
+  }
 }
 
 .detail-title {
@@ -238,7 +252,6 @@ html, body {
 
 .detail-text {
   font-size: 20px;
-  font-weight: bold;
 }
 
 .detail-pane-ingredients {
@@ -247,19 +260,17 @@ html, body {
 
 .detail-ingredient-amount {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   padding: 4px 10px 4px 0;
 }
 
 .detail-ingredient-unit {
   font-size: 16px;
-  font-weight: normal;
   padding: 4px 30px 4px 0;
 }
 
 .detail-ingredient-substance {
   font-size: 20px;
-  font-weight: bold;
 }
 
 .detail-pane-glassiceetc {
@@ -267,19 +278,27 @@ html, body {
 }
 
 .detail-pane-instructions {
-  /*margin: 40px 0 40px 0;*/
+  margin: 0 0 60px 0;
 }
-
-.detail-pane-description {
-  margin: 40px 0 0 0;
-}
-
 
 .detail-instructions-item {
   font-size: 20px;
-  font-weight: bold;
   list-style-position: inside;
-  margin-left: 20px;
+  margin: 4px 0 4px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail-instructions-item {
+    font-size: 20px;
+    list-style-position: outside;
+    margin: 4px 0 4px 0;
+  }
+}
+
+.detail-pane-description {
+  clear: left;
+  margin-right: 40px;
+  white-space: pre-line;
 }
 
 
