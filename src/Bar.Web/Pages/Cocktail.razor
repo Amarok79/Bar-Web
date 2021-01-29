@@ -1,4 +1,4 @@
-﻿@page "/cocktail/{key}"
+@page "/cocktail/{key}"
 @inject IDrinkRepository Repository
 @inject NavigationManager NavigationManager
 
@@ -30,7 +30,7 @@
 
             <div hidden="@(String.IsNullOrEmpty(mDrink.Ice))" class="float-left" style="margin-right: 100px">
                 <p class="detail-title">Eis</p>
-                <p class="detail-text">@mDrink.Ice</p>
+                <p class="detail-text">@mDrink.GetTranslatedIce()</p>
             </div>
 
             <div hidden="@(String.IsNullOrEmpty(mDrink.Garnish))">
