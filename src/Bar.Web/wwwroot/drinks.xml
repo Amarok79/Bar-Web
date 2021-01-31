@@ -79,9 +79,9 @@
 				<ingredient amount="3" unit="cl" substance="@CremeDeCacaoBlanc" />
 				<ingredient amount="3" unit="cl" substance="@Creme" />
 				<ingredient substance="Muskatnuss" />
-				<instruction>SHAKE alle Zutaten</instruction>
+				<!--<instruction>SHAKE alle Zutaten</instruction>
 				<instruction>FINE STRAIN ins Gästeglas</instruction>
-				<instruction>DUST mit Muskatnuss</instruction>
+				<instruction>DUST mit Muskatnuss</instruction>-->
 			</recipe>
 		</drink>
 
@@ -109,8 +109,8 @@
 				<ingredient amount="0.5" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="3" unit="cl" substance="@FreshOrangeJuice" />
 				<ingredient amount="2" unit="dash" substance="@OrangeBitter" />
-				<instruction>SHAKE alle Zutaten</instruction>
-				<instruction>STRAIN ins Gästeglas</instruction>
+				<!--<instruction>SHAKE alle Zutaten</instruction>
+				<instruction>STRAIN ins Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
@@ -136,7 +136,7 @@
 				<ingredient amount="4.5" unit="cl" substance="@VermouthRosso" />
 				<ingredient amount="4.5" unit="cl" substance="@Campari" />
 				<ingredient amount="7.5" unit="cl" substance="Soda" />
-				<instruction>BUILD im Gästeglas</instruction>
+				<!--<instruction>BUILD im Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
@@ -163,8 +163,8 @@
 				<ingredient amount="5" unit="cl" substance="@Averna" />
 				<ingredient amount="1" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="2" unit="cl" substance="@FreshOrangeJuice" />
-				<instruction>SHAKE alle Zutaten</instruction>
-				<instruction>STRAIN ins Gästeglas</instruction>
+				<!--<instruction>SHAKE alle Zutaten</instruction>
+				<instruction>STRAIN ins Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
@@ -190,8 +190,8 @@
 				<ingredient amount="1.5" unit="cl" substance="@Maraschino" />
 				<ingredient amount="0.75" unit="cl" substance="@CremeDeViolette" />
 				<ingredient amount="0.75" unit="cl" substance="Gekühltes Wasser" />
-				<instruction>LONG SHAKE alle Zutaten</instruction>
-				<instruction>FINE STRAIN ins Gästeglas</instruction>
+				<!--<instruction>LONG SHAKE alle Zutaten</instruction>
+				<instruction>FINE STRAIN ins Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
@@ -218,8 +218,8 @@
 				<ingredient amount="2" unit="cl" substance="@Baileys" />
 				<ingredient amount="2" unit="cl" substance="@GrandMarnier" />
 				<ingredient amount="0.5" unit="BL" substance="@PlantationOverproof" />
-				<instruction>LAYER Kahlua, Baileys, Grand Marnier</instruction>
-				<instruction>Entzünden</instruction>
+				<!--<instruction>LAYER Kahlua, Baileys, Grand Marnier</instruction>
+				<instruction>Entzünden</instruction>-->
 			</recipe>
 		</drink>
 
@@ -244,8 +244,8 @@
 				<ingredient amount="5" unit="cl" substance="@CachacaGermana" />
 				<ingredient amount="2" unit="cl" substance="@PassionFruitMix" />
 				<ingredient amount="6" unit="cl" substance="@CocosMilk" />
-				<instruction>LONG SHAKE alle Zutaten</instruction>
-				<instruction>POUR ins Gästeglas mit Eis</instruction>
+				<!--<instruction>LONG SHAKE alle Zutaten</instruction>
+				<instruction>POUR ins Gästeglas mit Eis</instruction>-->
 			</recipe>
 		</drink>
 
@@ -267,8 +267,8 @@
 				<ingredient amount="2" unit="cl" substance="@Cointreau" />
 				<ingredient amount="2" unit="cl" substance="@CreamOfCoconut" />
 				<ingredient amount="6" unit="cl" substance="@PineappleJuice" />
-				<instruction>SHAKE alle Zutaten</instruction>
-				<instruction>STRAIN ins Gästeglas</instruction>
+				<!--<instruction>SHAKE alle Zutaten</instruction>
+				<instruction>STRAIN ins Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
@@ -291,11 +291,11 @@
 				<ingredient amount="4.5" unit="cl" substance="@Beefeater24" />
 				<ingredient amount="1.5" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="2" unit="BL" substance="@CremeDeMure" />
-				<instruction>LIGHT SHAKE Zitronensaft, Gin und Läuterzucker</instruction>
+				<!--<instruction>LIGHT SHAKE Zitronensaft, Gin und Läuterzucker</instruction>
 				<instruction>FILL Gästeglas mit 3/4 Crushed Ice</instruction>
 				<instruction>POUR ins Gästeglas</instruction>
 				<instruction>FILL Gästeglas mit Crushed Ice</instruction>
-				<instruction>FLOAT Brombeerlikör</instruction>
+				<instruction>FLOAT Brombeerlikör</instruction>-->
 			</recipe>
 		</drink>
 
@@ -316,12 +316,12 @@
 			</description>
 			<glass>Caipirinha</glass>
 			<ice>Cubed</ice>
-			<garnish>None</garnish>
+			<garnish>-</garnish>
 			<recipe>
 				<ingredient amount="1" unit="" substance="@Lime" />
 				<ingredient amount="2" unit="BL" substance="@WhiteCaneSugar" />
 				<ingredient amount="6" unit="cl" substance="@CachacaGermana" />
-				<instruction>Limette skalpieren</instruction>
+				<!--<instruction>Limette skalpieren</instruction>
 				<instruction>Limette halbieren</instruction>
 				<instruction>Limette Strunk entfernen</instruction>
 				<instruction>Limette in 3 Scheiben schneiden</instruction>
@@ -331,7 +331,7 @@
 				<instruction>Restliche Zutaten in Shaker geben</instruction>
 				<instruction>Eiswürfel in Shaker geben</instruction>
 				<instruction>LONG SHAKE</instruction>
-				<instruction>POUR ins Gästeglas mit Eis</instruction>
+				<instruction>POUR ins Gästeglas mit Eis</instruction>-->
 			</recipe>
 		</drink>
 
@@ -354,14 +354,14 @@
 			</description>
 			<glass>Caipirinha</glass>
 			<ice>Cubed</ice>
-			<garnish>None</garnish>
+			<garnish>-</garnish>
 			<recipe>
 				<ingredient amount="1" unit="" substance="@Passionfruit" />
 				<ingredient amount="1" unit="" substance="@Lime" />
 				<ingredient amount="1" unit="BL" substance="@WhiteCaneSugar" />
 				<ingredient amount="1.5" unit="cl" substance="@PassionFruitMix" />
 				<ingredient amount="6" unit="cl" substance="@CachacaGermana" />
-				<instruction>Limette skalpieren</instruction>
+				<!--<instruction>Limette skalpieren</instruction>
 				<instruction>Limette halbieren</instruction>
 				<instruction>Limette Strunk entfernen</instruction>
 				<instruction>Limette in 3 Scheiben schneiden</instruction>
@@ -371,7 +371,7 @@
 				<instruction>Restliche Zutaten in Shaker geben</instruction>
 				<instruction>Eiswürfel in Shaker geben</instruction>
 				<instruction>LONG SHAKE</instruction>
-				<instruction>POUR ins Gästeglas mit Eis</instruction>
+				<instruction>POUR ins Gästeglas mit Eis</instruction>-->
 			</recipe>
 		</drink>
 
@@ -398,15 +398,14 @@
 				<ingredient amount="3" unit="cl" substance="dmBio Cranberrysaft, 100% Muttersaft" />
 				<ingredient amount="1.5" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="1" unit="dash" substance="@OrangeBitter" />
-				<instruction>SHAKE alle Zutaten</instruction>
+				<!--<instruction>SHAKE alle Zutaten</instruction>
 				<instruction>FINE STRAIN ins Gästeglas</instruction>
-				<instruction>Glasrand mit Orange einreiben</instruction>
+				<instruction>Glasrand mit Orange einreiben</instruction>-->
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>9c0e4dae-8ac8-4166-9303-0a784cb73909</id>
+			<id>63B7BB3E-1E0D-41F0-8F6B-0D8647DB0743</id>
 			<name>Cuba Libre</name>
 			<teaser>Rum, Limette, Coca Cola</teaser>
 			<image>KRO00041.jpg</image>
@@ -420,21 +419,21 @@
 			</description>
 			<glass>Longdrink</glass>
 			<ice>Cubed</ice>
-			<garnish>Limetten-scheibe/spalte</garnish>
+			<garnish>Limettenspalte</garnish>
 			<recipe>
 				<ingredient amount="1" unit="" substance="@Lime" />
 				<ingredient amount="5" unit="cl" substance="@SantiagoDeCuba" />
 				<ingredient amount="10" unit="cl" substance="@CocaCola" />
-				<instruction>Limette in Spalten schneiden</instruction>
+				<!--<instruction>Limette in Spalten schneiden</instruction>
 				<instruction>Ins Gästeglas ausdrücken, geben</instruction>
 				<instruction>Eis und Rum drauf</instruction>
 				<instruction>STIR</instruction>
-				<instruction>FILL mit Cola</instruction>
+				<instruction>FILL mit Cola</instruction>-->
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>c9f37b9e-e8d4-45ea-9696-1072cd4eb922</id>
+			<id>8A9CA960-C22F-4736-BE66-41BEE1DBBE72</id>
 			<name>Dark &amp; Stormy</name>
 			<teaser>Rum, Ginger Beer, Limettensaft</teaser>
 			<image>KRO00518.jpg</image>
@@ -453,13 +452,13 @@
 				<ingredient amount="3" unit="cl" substance="@FreshLimeJuice" />
 				<ingredient amount="6" unit="cl" substance="@AppletonRum" />
 				<ingredient amount="12" unit="cl" substance="Ginger Beer" />
-				<instruction>STIR Limettensaft und Rum auf Eis</instruction>
-				<instruction>FILL mit Ginger Beer</instruction>
+				<!--<instruction>STIR Limettensaft und Rum auf Eis</instruction>
+				<instruction>FILL mit Ginger Beer</instruction>-->
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>10cccda1-797f-450e-818d-e629e2603658</id>
+			<id>2B5B9283-9931-4C2C-8751-5C2440713717</id>
 			<name>Gamble</name>
 			<teaser>Sloe Gin, Grapefruitsaft, Kirschlikör</teaser>
 			<image>KRO00005.jpg</image>
@@ -476,15 +475,15 @@
 				<ingredient amount="3" unit="cl" substance="@Beefeater24" />
 				<ingredient amount="1" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="1.5" unit="cl" substance="@CherryHeering" />
-				<instruction>LIGHT SHAKE Grapefruitsaft, Gin und Läuterzucker</instruction>
-				<instruction>FILL Gästeglas mit Crushed Ice 3/4</instruction>
+				<!--<instruction>LIGHT SHAKE Grapefruitsaft, Gin und Läuterzucker</instruction>
+				<instruction>FILL Gästeglas mit 3/4 Crushed Ice</instruction>
 				<instruction>POUR ins Gästeglas</instruction>
-				<instruction>FILL Gästeglas mit Crushed Ice</instruction>
+				<instruction>FILL Gästeglas mit Crushed Ice</instruction>-->
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>334948f5-4b3a-4288-bd02-47237d4586b0</id>
+			<id>087E9B41-9938-4345-A36A-71A6DEBA0746</id>
 			<name>Gin &amp; Sin</name>
 			<teaser>Gin, Zitronensaft, Orangensaft, Grenadine</teaser>
 			<image>KRO00312.jpg</image>
@@ -493,20 +492,20 @@
 			</description>
 			<glass>Martini</glass>
 			<ice>None</ice>
-			<garnish></garnish>
+			<garnish>-</garnish>
 			<recipe>
 				<ingredient amount="2" unit="cl" substance="@FreshLemonJuice" />
 				<ingredient amount="4" unit="cl" substance="@FreshOrangeJuice" />
 				<ingredient amount="4" unit="cl" substance="@Beefeater24" />
 				<ingredient amount="1" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="1" unit="dash" substance="@Grenadine" />
-				<instruction>SHAKE alle Zutaten</instruction>
-				<instruction>FILL STRAIN ins Gästeglas</instruction>
+				<!--<instruction>SHAKE alle Zutaten</instruction>
+				<instruction>FILL STRAIN ins Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>6397dafb-a4ad-421e-bdd8-d622adb0e9ed</id>
+			<id>BA715F17-5163-435E-BA6D-E9B811F415EF</id>
 			<name>Gin &amp; Tonic</name>
 			<teaser>Gin, Tonic Water</teaser>
 			<image>KRO00794.jpg</image>
@@ -524,14 +523,14 @@
 			<ice>Cubed</ice>
 			<garnish>Zitronenzeste</garnish>
 			<recipe>
-				<ingredient amount="4.5" unit="cl" substance="Gin" />
+				<ingredient amount="6" unit="cl" substance="Gin" />
 				<ingredient amount="20" unit="cl" substance="Tonic Water" />
-				<instruction>BUILD im Gästeglas</instruction>
+				<!--<instruction>BUILD im Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>cb15a6a6-1297-4959-b55b-d577020bc528</id>
+			<id>9D32E244-CC33-495A-AD70-F8091EB0A413</id>
 			<name>Horse's Neck with a Kick</name>
 			<teaser>Bourbon Whiskey, Ginger Ale</teaser>
 			<image>KRO00106.jpg</image>
@@ -550,12 +549,12 @@
 				<ingredient amount="6" unit="cl" substance="@FourRoses" />
 				<ingredient amount="3" unit="dash" substance="@AngosturaBitter" />
 				<ingredient amount="12" unit="cl" substance="@GingerAle" />
-				<instruction>BUILD im Gästeglas</instruction>
+				<!--<instruction>BUILD im Gästeglas</instruction>-->
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>2aae14c1-5470-48f9-8d55-cbc90c499708</id>
+			<id>241E6FFD-E3E1-414E-8FE2-C404AE544E25</id>
 			<name>Leapfrog</name>
 			<teaser>Gin, Zitronensaft, Ginger Ale</teaser>
 			<image>KRO00560.jpg</image>
@@ -574,15 +573,14 @@
 				<ingredient amount="1.5" unit="cl" substance="@FreshLemonJuice" />
 				<ingredient amount="4.5" unit="cl" substance="@BurleighsGin" />
 				<ingredient substance="@GingerAle" />
-				<instruction>STIR Zitronensaft und Gin</instruction>
+				<!--<instruction>STIR Zitronensaft und Gin</instruction>
 				<instruction>POUR ins Gästeglas</instruction>
-				<instruction>FILL mit Ginger Ale</instruction>
+				<instruction>FILL mit Ginger Ale</instruction>-->
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>fc4518b9-36a7-4bcb-b181-7ce5b4b94268</id>
+			<id>2B7991FD-09FD-49A4-81FB-087A473C87F4</id>
 			<name>Long Island Iced Tea</name>
 			<teaser>Vodka, Gin, Tequilla, Rum, Triple Sec, Limettensaft, Cola</teaser>
 			<image>KRO00004.jpg</image>
@@ -594,6 +592,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Zitronenscheibe</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="1.5" unit="cl" substance="Wodka" />
@@ -606,9 +607,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>6e051cea-e903-44c5-b84e-c550a88216dd</id>
+			<id>5AABCDFE-4A42-42C2-88A4-E037563669C7</id>
 			<name>Mai Tai</name>
 			<teaser>Rum, Cointreau, Mandellikör, Limettensaft, Muskatnuss</teaser>
 			<image>KRO00252.jpg</image>
@@ -622,6 +622,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Double Old Fashioned</glass>
+			<ice>Crushed</ice>
+			<garnish>Limettenhälfe, Maraschiokirsche</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="2" unit="cl" substance="Clément Rhum Blanc" />
@@ -633,7 +636,7 @@
 		</drink>
 
 		<drink>
-			<id>8c77cfa5-f38f-4ad8-a90a-758415b61845</id>
+			<id>A55ECF74-E596-4AD5-A47B-87BA26246C25</id>
 			<name>Martinez (Gin)</name>
 			<teaser>Old Tom Gin, Vermouth, Maraschino</teaser>
 			<image>KRO00207.jpg</image>
@@ -643,6 +646,9 @@
 
 				(mixology.eu)
 			</description>
+			<glass>Martini</glass>
+			<ice>-</ice>
+			<garnish>Maraschinokirsche</garnish>
 			<recipe>
 				<ingredient amount="6" unit="cl" substance="Hayman's Old Tom Gin" />
 				<ingredient amount="0.75" unit="cl" substance="Vermouth Dry" />
@@ -653,7 +659,7 @@
 		</drink>
 
 		<drink>
-			<id>047d58be-df75-432f-b9a6-789980d3f06b</id>
+			<id>AA5127A4-FE46-4F22-AB09-D2C3C0FF2347</id>
 			<name>Mojito</name>
 			<teaser>Weißer Rum, Limettensaft, Minze, Soda</teaser>
 			<image>KRO00327.jpg</image>
@@ -665,6 +671,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Caipirinha</glass>
+			<ice>Crushed</ice>
+			<garnish>Minze</garnish>
 			<recipe>
 				<ingredient substance="Minzzweige" />
 				<ingredient amount="3" unit="cl" substance="Frischer Limettensaft" />
@@ -674,9 +683,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>4d594c7d-74b1-45fb-ad38-04bc82db7f49</id>
+			<id>F6089892-0471-4434-9921-A08E878566A2</id>
 			<name>Negroni</name>
 			<teaser>Gin, Campari, Vermouth Rosso</teaser>
 			<image>KRO00079.jpg</image>
@@ -690,6 +698,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Old Fashioned</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenzeste</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Plymouth Dry Gin" />
 				<ingredient amount="3" unit="cl" substance="Campari Bitterlikör" />
@@ -697,32 +708,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>9d737331-6a74-4f10-af3e-89dfae9229a5</id>
-			<name>Old Fashioned</name>
-			<teaser>Bourbon Whiskey, Bitters</teaser>
-			<image></image>
-			<tags></tags>
-			<description>
-				Ein Old Fashioned (von englisch old-fashioned für altmodisch, althergebracht) ist einer der wichtigsten klassischen Cocktails. Im 19. Jahrhundert zunächst als Whiskey Cocktail, später Old Fashioned Whiskey Cocktail, bezeichnet, entspricht der Shortdrink noch heute weitgehend der Urform eines „Cocktails“ in seiner ursprünglichen Definition, besteht also aus einer Spirituose, Zucker, Wasser bzw. Eis sowie Cocktailbitter.
-
-				Serviert werden Old Fashioneds meist in einem kleinen Becherglas, das auch Old-Fashioned-Glas genannt wird.
-
-				(Wikipedia)
-			</description>
-			<recipe>
-				<ingredient amount="1" unit="" substance="Zuckerwürfel" />
-				<ingredient amount="1" unit="BL" substance="Soda" />
-				<ingredient amount="1" unit="dash" substance="Angostura Bitter" />
-				<ingredient amount="1" unit="dash" substance="The Bitter Truth Orange Bitter" />
-				<ingredient amount="6" unit="cl" substance="Four Roses Single Barrel Bourbon Whiskey" />
-			</recipe>
-		</drink>
-
-
-		<drink>
-			<id>06d719ca-1a1d-4280-aa9b-39f428511289</id>
+			<id>B65A2F60-4B18-4B35-86A7-3161922DE632</id>
 			<name>Piña Colada</name>
 			<teaser>Rum, Limettensaft, Creme of Coconut, Ananassaft</teaser>
 			<image>KRO00295.jpg</image>
@@ -734,8 +721,11 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Fancy</glass>
+			<ice>Crushed</ice>
+			<garnish>Ananasscheibe</garnish>
 			<recipe>
-				<ingredient amount="2" unit="" substance="Scheiben frisch Ananas" />
+				<ingredient amount="2" unit="" substance="Scheiben frische Ananas" />
 				<ingredient amount="5" unit="cl" substance="Don Papas Rum" />
 				<ingredient amount="1" unit="cl" substance="Baileys" />
 				<ingredient amount="3" unit="cl" substance="Creme of Coconut" />
@@ -743,6 +733,7 @@
 				<ingredient amount="2" unit="cl" substance="Ananassaft" />
 			</recipe>
 		</drink>
+
 
 		<drink>
 			<id>a3005880-64dd-4490-99ac-28ed6a2ec1dc</id>
@@ -753,6 +744,9 @@
 			<description>
 				Ein süßer-cremiger Cocktail mit feinem Vanille- und Maracujageschmack.
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Sierra Milenario Blanco Tequila" />
 				<ingredient amount="2" unit="cl" substance="Likör 43" />
@@ -776,6 +770,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Frischer Zitronensaft" />
 				<ingredient amount="4.5" unit="cl" substance="Ramazotti" />
@@ -793,6 +790,9 @@
 			<description>
 				Ein süß-cremiger Cocktail, der bei seiner rosa Farbe geschmacklich automatisch an Erdbeere erinnert, obwohl Bananensirup enthalten ist.
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="2" unit="cl" substance="Wodka" />
 				<ingredient amount="4" unit="cl" substance="Likör 43" />
@@ -821,6 +821,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="4.5" unit="cl" substance="Beefeater 24 London Dry Gin" />
@@ -842,6 +845,9 @@
 			<description>
 				Ein Tiki-inspirierter Gin Sour mit Passionsfrucht und Mandel.
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="1.5" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="4.5" unit="cl" substance="Beefeater 24 London Dry Gin" />
@@ -864,6 +870,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 			</recipe>
 		</drink>
@@ -882,6 +891,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="6" unit="cl" substance="Wodka" />
 				<ingredient amount="3" unit="cl" substance="Kahlua Kaffeelikör" />
@@ -908,6 +920,9 @@
 
 				(Wikipedia)
 			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
 			<recipe>
 				<ingredient amount="2.5" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="2" unit="cl" substance="Frischer Grapefruitsaft" />
@@ -922,6 +937,32 @@
 				<ingredient amount="2" unit="dash" substance="Angostura Aromatic Bitter" />
 			</recipe>
 		</drink>
+
+
+		<!--<drink>
+			<id>9d737331-6a74-4f10-af3e-89dfae9229a5</id>
+			<name>Old Fashioned</name>
+			<teaser>Bourbon Whiskey, Bitters</teaser>
+			<image></image>
+			<tags></tags>
+			<description>
+				Ein Old Fashioned (von englisch old-fashioned für altmodisch, althergebracht) ist einer der wichtigsten klassischen Cocktails. Im 19. Jahrhundert zunächst als Whiskey Cocktail, später Old Fashioned Whiskey Cocktail, bezeichnet, entspricht der Shortdrink noch heute weitgehend der Urform eines „Cocktails“ in seiner ursprünglichen Definition, besteht also aus einer Spirituose, Zucker, Wasser bzw. Eis sowie Cocktailbitter.
+
+				Serviert werden Old Fashioneds meist in einem kleinen Becherglas, das auch Old-Fashioned-Glas genannt wird.
+
+				(Wikipedia)
+			</description>
+			<glass>Longdrink</glass>
+			<ice>Cubed</ice>
+			<garnish>Orangenscheibe</garnish>
+			<recipe>
+				<ingredient amount="1" unit="" substance="Zuckerwürfel" />
+				<ingredient amount="1" unit="BL" substance="Soda" />
+				<ingredient amount="1" unit="dash" substance="Angostura Bitter" />
+				<ingredient amount="1" unit="dash" substance="The Bitter Truth Orange Bitter" />
+				<ingredient amount="6" unit="cl" substance="Four Roses Single Barrel Bourbon Whiskey" />
+			</recipe>
+		</drink>-->
 
 
 		<!--<drink>
