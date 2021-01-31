@@ -57,7 +57,7 @@
 	<drinks>
 
 		<drink>
-			<id>81765525-a1cd-4c1a-a10c-9075d412bc5f</id>
+			<id>D2C4DB93-61D4-4108-8D87-C730FDA1DF7C</id>
 			<name>Alexander</name>
 			<teaser>Gin, Crème de Cacao, Sahne, Muskatnuss</teaser>
 			<image>KRO00298.jpg</image>
@@ -86,7 +86,7 @@
 		</drink>
 
 		<drink>
-			<id>a89e55cb-ab97-41d0-b3ad-012dd3387983</id>
+			<id>4A0A73D0-DCB1-4037-80B2-0269139C653E</id>
 			<name>Amaretto Sour</name>
 			<teaser>Amaretto, Zitronensaft, Orangensaft</teaser>
 			<image>KRO00033.jpg</image>
@@ -96,9 +96,9 @@
 
 				Amaretto ist eine Geschmacksrichtung für ursprünglich aus Italien stammende Liköre mit einem nussigen Aroma, das an Marzipan erinnert. Die Bezeichnung "Amaretto" ist eine Verkleinerungsform des italienischen Wortes amaro, was so viel bedeutet wie "bitter". Ursprünglich wurden Bittermandeln (italienisch mandorla amara) oder Aprikosenkerne, teilweise auch süße Mandeln zur Aromatisierung verwendet.
 
-				Der Amaretto Sour ist zusammen mit dem Averna Sour einer unserer beliebtesten Cocktails. Wer es lieber süßer hat, wählt den Amaretto Sour. Wer es lieber ein wenig bitterer mag, den Averna Sour.
-
 				(Wikipedia)
+
+				Der Amaretto Sour ist zusammen mit dem Averna Sour einer unserer beliebtesten Cocktails. Wer es lieber süßer hat, wählt den Amaretto Sour. Wer es lieber ein wenig bitterer mag, den Averna Sour.
 			</description>
 			<glass>Old Fashioned</glass>
 			<ice>Cubed</ice>
@@ -115,7 +115,7 @@
 		</drink>
 
 		<drink>
-			<id>b7ea4901-f95b-4cbe-8062-52e8df0a4819</id>
+			<id>C28E2803-820D-4551-889D-9083FDD51CE5</id>
 			<name>Americano</name>
 			<teaser>Campari, Vermouth Rosso, Soda</teaser>
 			<image>KRO00534.jpg</image>
@@ -141,7 +141,7 @@
 		</drink>
 
 		<drink>
-			<id>9392e2d0-6949-496c-b241-2daec437dc2e</id>
+			<id>7DA2F992-2285-46D4-84A9-B9CCB6C40592</id>
 			<name>Averna Sour</name>
 			<teaser>Averna, Zitronensaft, Orangensaft</teaser>
 			<image>KRO00065.jpg</image>
@@ -151,9 +151,9 @@
 
 				Averna (Amaro Siciliano) ist ein sizilianischer Bitterlikör, hergestellt aus verschiedenen Kräutern, Wurzeln und ätherischen Ölen aus Bitterorangen und Zitronen. Der Geschmack von Averna ist bittersüß mit Anklängen von Orange und Süßholz sowie Noten von Myrte, Wacholderbeeren, Rosmarin und Salbei.
 
-				Der Averna Sour ist zusammen mit dem Amaretto Sour einer unserer beliebtesten Cocktails. Wer es lieber süßer hat, wählt den Amaretto Sour. Wer es lieber ein wenig bitterer mag, den Averna Sour.
-
 				(Wikipedia)
+
+				Der Averna Sour ist zusammen mit dem Amaretto Sour einer unserer beliebtesten Cocktails. Wer es lieber süßer hat, wählt den Amaretto Sour. Wer es lieber ein wenig bitterer mag, den Averna Sour.
 			</description>
 			<glass>Old Fashioned</glass>
 			<ice>Cubed</ice>
@@ -169,7 +169,7 @@
 		</drink>
 
 		<drink>
-			<id>2800a8a8-9c0e-4ae0-819f-81f79083d7fc</id>
+			<id>FEB5E84D-C5C4-42A1-BDAC-4FAE21AF6915</id>
 			<name>Aviation</name>
 			<teaser>Gin, Zitronensaft, Maraschino, Crème de Violette</teaser>
 			<image>KRO00526.jpg</image>
@@ -196,13 +196,13 @@
 		</drink>
 
 		<drink>
-			<id>1d51d843-7583-4848-903d-f8af5c720a54</id>
+			<id>C5199982-91CF-439C-B686-59A0B89EC31E</id>
 			<name>B52</name>
 			<teaser>Kahlua, Baileys, Grand Marnier</teaser>
 			<image>KRO00192.jpg</image>
 			<tags>sweet;creamy</tags>
 			<description>
-				Der B52 (auch "Bifi") ist ein Cocktail (Kurzer), dessen Bestandteile im Glas drei – auch optisch – klar abgegrenzte Schichten ergeben.
+				Der B52 (auch "Bifi") ist ein Cocktail (Shoot), dessen Bestandteile im Glas drei – auch optisch – klar abgegrenzte Schichten ergeben.
 
 				Der B52 wurde der Legende nach im berühmten Alice's Restaurant in Malibu (Kalifornien) kreiert. Der Name bezieht sich auf den US-Langstreckenbomber Boeing B-52. Dieser Bomber wurde unter anderem im Vietnamkrieg zum Abwurf von Brandbomben verwendet. Gerüchteweise entstand in Anlehnung daran die heute gängige flambierte Variante des Cocktails.
 
@@ -217,14 +217,14 @@
 				<ingredient amount="2" unit="cl" substance="@Kahlua" />
 				<ingredient amount="2" unit="cl" substance="@Baileys" />
 				<ingredient amount="2" unit="cl" substance="@GrandMarnier" />
-				<ingredient amount="1" unit="BL" substance="@PlantationOverproof" />
+				<ingredient amount="0.5" unit="BL" substance="@PlantationOverproof" />
 				<instruction>LAYER Kahlua, Baileys, Grand Marnier</instruction>
 				<instruction>Entzünden</instruction>
 			</recipe>
 		</drink>
 
 		<drink>
-			<id>f32a1c5c-df0e-4106-ac68-f63185c8029a</id>
+			<id>6750029F-7B11-4C05-8096-3581900FE8B9</id>
 			<name>Batida de Maracuja</name>
 			<teaser>Cachaça, Passionsfrucht, Kokosmilch</teaser>
 			<image>KRO00538.jpg</image>
@@ -250,7 +250,7 @@
 		</drink>
 
 		<drink>
-			<id>1df0c44d-bc30-4321-ab87-259fa6ebe6b7</id>
+			<id>55A7854B-AF0A-4438-8BDE-0463720F3569</id>
 			<name>Bellevue</name>
 			<teaser>Rum, Cointreau, Cream of Coconut, Ananassaft</teaser>
 			<image>KRO00123.jpg</image>
@@ -273,7 +273,7 @@
 		</drink>
 
 		<drink>
-			<id>bc189268-befa-4bfe-8325-7218ac0c4816</id>
+			<id>6E8EDB61-CC71-4D90-977E-7068AAC9343E</id>
 			<name>Bramble</name>
 			<teaser>Gin, Zitronensaft, Brombeerlikör</teaser>
 			<image>KRO00454.jpg</image>
@@ -292,7 +292,7 @@
 				<ingredient amount="1.5" unit="cl" substance="@SugarSyrup" />
 				<ingredient amount="2" unit="BL" substance="@CremeDeMure" />
 				<instruction>LIGHT SHAKE Zitronensaft, Gin und Läuterzucker</instruction>
-				<instruction>FILL Gästeglas mit Crushed Ice 3/4</instruction>
+				<instruction>FILL Gästeglas mit 3/4 Crushed Ice</instruction>
 				<instruction>POUR ins Gästeglas</instruction>
 				<instruction>FILL Gästeglas mit Crushed Ice</instruction>
 				<instruction>FLOAT Brombeerlikör</instruction>
@@ -300,7 +300,7 @@
 		</drink>
 
 		<drink>
-			<id>c6273a25-7ea6-4aa9-b1b8-e0d8fce6aa4e</id>
+			<id>7E02FAAF-42F0-4991-8ADE-904C8B647D99</id>
 			<name>Caipirinha</name>
 			<teaser>Cachaça, Limette, Rohrzucker</teaser>
 			<image>KRO00293.jpg</image>
@@ -336,7 +336,7 @@
 		</drink>
 
 		<drink>
-			<id>4d0a5d88-aebd-406d-bd0d-e30f80f1bac5</id>
+			<id>33BD5AEB-4FAC-4545-9508-7900D29DBE94</id>
 			<name>Caipirinha &amp; Passion</name>
 			<teaser>Cachaça, Limette, Passionsfrucht, Rohrzucker</teaser>
 			<image>KRO00553.jpg</image>
@@ -376,7 +376,7 @@
 		</drink>
 
 		<drink>
-			<id>a419dd50-16a8-4174-b46b-b0f28e658576</id>
+			<id>80443F07-D22C-41BE-9EAE-C479B26BBC75</id>
 			<name>Cosmopolitan</name>
 			<teaser>Wodka, Cointreau, Cranberrysaft, Limettensaft</teaser>
 			<image>KRO00006.jpg</image>
@@ -403,6 +403,7 @@
 				<instruction>Glasrand mit Orange einreiben</instruction>
 			</recipe>
 		</drink>
+
 
 		<drink>
 			<id>9c0e4dae-8ac8-4166-9303-0a784cb73909</id>
