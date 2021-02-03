@@ -62,7 +62,7 @@ namespace Bar.Web.Services
         }
 
 
-        private List<Drink> _LoadFromManifest(BarId barId, String manifestPath)
+        private static List<Drink> _LoadFromManifest(BarId barId, String manifestPath)
         {
             var doc         = XDocument.Load(manifestPath);
             var catalogNode = doc.Element("catalog");
@@ -119,7 +119,7 @@ namespace Bar.Web.Services
 
                                 if (substance.StartsWith("@", StringComparison.Ordinal))
                                 {
-                                    var substanceId = substance.Substring(1);
+                                    var substanceId = substance[1..];
 
                                     if (substances.TryGetValue(substanceId, out var substanceName))
                                         substance = substanceName;
