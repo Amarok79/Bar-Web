@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bar.Web", "src\Bar.Web\Bar.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C36CFB6A-C0F4-4446-A2DD-95E544DDCA0E}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.github\workflows\main.yml = .github\workflows\main.yml
 	EndProjectSection
 EndProject
