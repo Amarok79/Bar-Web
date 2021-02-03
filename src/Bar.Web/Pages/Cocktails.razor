@@ -39,6 +39,7 @@
         await Task.Delay(50);
         var id = new BarId(Guid.Empty);
         mItems = await Repository.GetAllAsync(id);
+        mItems = mItems.OrderBy(x => x.Name);
     }
 
     void _HandleClicked(Drink item) {

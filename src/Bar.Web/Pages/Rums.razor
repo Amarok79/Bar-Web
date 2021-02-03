@@ -36,6 +36,7 @@
         mItems = Utils.CreateEmptyRums();
         await Task.Delay(50);
         mItems = await Repository.GetAllAsync();
+        mItems = mItems.OrderBy(x => x.Name);
     }
 
 }
