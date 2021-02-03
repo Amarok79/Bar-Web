@@ -50,9 +50,7 @@ namespace Bar.Web.Services
             var fileInfo = mWebHostEnvironment.WebRootFileProvider.GetFileInfo("rum.json");
 
             if (!fileInfo.Exists)
-            {
                 return Array.Empty<Rum>();
-            }
 
             await using var stream = File.OpenRead(fileInfo.PhysicalPath);
 
@@ -62,9 +60,7 @@ namespace Bar.Web.Services
             );
 
             if (dto?.Rums == null)
-            {
                 return Array.Empty<Rum>();
-            }
 
             return dto.Rums.OrderBy(x => x.Name);
         }

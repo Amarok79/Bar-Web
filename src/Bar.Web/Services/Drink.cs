@@ -48,6 +48,11 @@ namespace Bar.Web.Services
         public BarId BarId { get; }
 
         /// <summary>
+        /// Gets the Key of the Drink, e.g. "mai-tai".
+        /// </summary>
+        public String Key { get; private set; }
+
+        /// <summary>
         /// Gets the Name of the Drink, e.g. "Mai Tai".
         /// </summary>
         public String Name { get; private set; }
@@ -102,6 +107,20 @@ namespace Bar.Web.Services
             BarId = barId;
         }
 
+
+        /// <summary>
+        /// Sets the Key of the Drink.
+        /// </summary>
+        /// 
+        /// <param name="key">
+        /// The key of the drink. Neither null nor empty strings are allowed.</param>
+        public Drink SetKey(String key)
+        {
+            Verify.NotEmpty(key, nameof(key));
+            Key = key;
+
+            return this;
+        }
 
         /// <summary>
         /// Sets the Name of the Drink.
@@ -226,6 +245,18 @@ namespace Bar.Web.Services
             Garnish = garnish;
 
             return this;
+        }
+
+
+        /// <summary>
+        /// </summary>
+        public String GetTranslatedIce()
+        {
+            return Ice switch {
+                "Cubed"   => "Würfel",
+                "Crushed" => "Gestoßen",
+                _         => "-",
+            };
         }
     }
 }

@@ -19,6 +19,10 @@ html, body {
   position: relative;
 }
 
+.float-left {
+  float: left;
+}
+
 
 /* Page Layout */
 
@@ -176,6 +180,14 @@ html, body {
   width: 300px;
 }
 
+.item-clickable {
+  cursor: pointer;
+}
+
+.item-clickable:hover {
+  opacity: 0.7;
+}
+
 .item-image {
   border-color: white;
   border-radius: 5px;
@@ -183,10 +195,6 @@ html, body {
   border-width: 5px;
   height: 100%;
   width: 100%;
-}
-
-.item-image:hover {
-  /*opacity: 0.7;*/
 }
 
 .item-title {
@@ -208,6 +216,89 @@ html, body {
   text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
   white-space: nowrap;
   width: 280px;
+}
+
+
+.detail-image {
+  border-color: white;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 8px;
+  float: left;
+  height: 35%;
+  margin: 40px 100px 60px 0;
+  transform: rotate(-3deg);
+  width: 35%;
+}
+
+@media screen and (max-width: 600px) {
+  .detail-image {
+    border-color: white;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 8px;
+    float: left;
+    height: 80%;
+    margin: 40px 100px 60px 20px;
+    transform: rotate(-3deg);
+    width: 80%;
+  }
+}
+
+.detail-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.detail-text {
+  font-size: 20px;
+}
+
+.detail-pane-ingredients {
+  margin: 40px 0 60px 0;
+}
+
+.detail-ingredient-amount {
+  font-size: 20px;
+  font-weight: normal;
+  padding: 4px 10px 4px 0;
+}
+
+.detail-ingredient-unit {
+  font-size: 16px;
+  padding: 4px 30px 4px 0;
+}
+
+.detail-ingredient-substance {
+  font-size: 20px;
+}
+
+.detail-pane-glassiceetc {
+  margin: 0 0 60px 0;
+}
+
+.detail-pane-instructions {
+  margin: 0 0 60px 0;
+}
+
+.detail-instructions-item {
+  font-size: 20px;
+  list-style-position: inside;
+  margin: 4px 0 4px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .detail-instructions-item {
+    font-size: 20px;
+    list-style-position: outside;
+    margin: 4px 0 4px 0;
+  }
+}
+
+.detail-pane-description {
+  clear: left;
+  margin-right: 40px;
+  white-space: pre-line;
 }
 
 

@@ -50,9 +50,7 @@ namespace Bar.Web.Services
             var fileInfo = mWebHostEnvironment.WebRootFileProvider.GetFileInfo("gin.json");
 
             if (!fileInfo.Exists)
-            {
                 return Array.Empty<Gin>();
-            }
 
             await using var stream = File.OpenRead(fileInfo.PhysicalPath);
 
@@ -62,9 +60,7 @@ namespace Bar.Web.Services
             );
 
             if (dto?.Gins == null)
-            {
                 return Array.Empty<Gin>();
-            }
 
             return dto.Gins.OrderBy(x => x.Name);
         }

@@ -47,7 +47,7 @@ namespace Bar.Web.Pages
 
         public void OnGet()
         {
-            RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier;
+            RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         }
     }
 }
