@@ -734,9 +734,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>a3005880-64dd-4490-99ac-28ed6a2ec1dc</id>
+			<id>ECAE814F-6385-48F5-BAB4-8408D2B0296B</id>
 			<name>Prince</name>
 			<teaser>Tequilla, Vanillelikör, Creme of Coconut, Sahne, Maracujasaft</teaser>
 			<image>KRO00138.jpg</image>
@@ -746,7 +745,7 @@
 			</description>
 			<glass>Longdrink</glass>
 			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<garnish>Maraschinokirsche</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Sierra Milenario Blanco Tequila" />
 				<ingredient amount="2" unit="cl" substance="Likör 43" />
@@ -756,9 +755,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>f383a052-dc28-4569-9991-a4d832d66515</id>
+			<id>989293B5-193A-4766-B90E-303EAFBB693D</id>
 			<name>Ramazotti Sour</name>
 			<teaser>Ramazotti, Zitronensaft, Orangensaft</teaser>
 			<image>KRO00093.jpg</image>
@@ -770,9 +768,9 @@
 
 				(Wikipedia)
 			</description>
-			<glass>Longdrink</glass>
+			<glass>Old Fashioned</glass>
 			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<garnish>Zitronescheibe</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Frischer Zitronensaft" />
 				<ingredient amount="4.5" unit="cl" substance="Ramazotti" />
@@ -782,7 +780,7 @@
 		</drink>
 
 		<drink>
-			<id>3c743ef3-5068-43c6-bf84-b0ad277d12c3</id>
+			<id>73806555-4CA6-4DB8-B231-7C82C42CBCC8</id>
 			<name>Rosa Lady</name>
 			<teaser>Wodka, Vanillelikör, Bananenlikör, Sahne, Maracujasaft, Ananassaft</teaser>
 			<image>KRO00161.jpg</image>
@@ -790,9 +788,9 @@
 			<description>
 				Ein süß-cremiger Cocktail, der bei seiner rosa Farbe geschmacklich automatisch an Erdbeere erinnert, obwohl Bananensirup enthalten ist.
 			</description>
-			<glass>Longdrink</glass>
+			<glass>Fancy</glass>
 			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<garnish>Maraschinokirsche</garnish>
 			<recipe>
 				<ingredient amount="2" unit="cl" substance="Wodka" />
 				<ingredient amount="4" unit="cl" substance="Likör 43" />
@@ -805,9 +803,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>1977b312-8d98-4dcc-b5de-704f4d9dc0fe</id>
+			<id>411560D1-FC5F-48FE-855D-1A66C7FF7490</id>
 			<name>Singapore Sling</name>
 			<teaser>Gin, Limettensaft, Kirschlikör, Cointreau, Benedictine, Ananassaft</teaser>
 			<image>KRO00221.jpg</image>
@@ -821,9 +818,9 @@
 
 				(Wikipedia)
 			</description>
-			<glass>Longdrink</glass>
+			<glass>Fancy</glass>
 			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<garnish>Maraschinokirsche</garnish>
 			<recipe>
 				<ingredient amount="3" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="4.5" unit="cl" substance="Beefeater 24 London Dry Gin" />
@@ -837,7 +834,7 @@
 		</drink>
 
 		<drink>
-			<id>5ca528c7-d197-4834-9e3b-3eeca8467779</id>
+			<id>DE7B08EF-54E0-4F1F-B367-FF837CD2ACA5</id>
 			<name>Saturn</name>
 			<teaser>Gin, Limettensaft, Falerum, Orgeat, Maracujasirup</teaser>
 			<image>KRO00003.jpg</image>
@@ -845,9 +842,9 @@
 			<description>
 				Ein Tiki-inspirierter Gin Sour mit Passionsfrucht und Mandel.
 			</description>
-			<glass>Longdrink</glass>
-			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<glass>Old Fashioned</glass>
+			<ice>-</ice>
+			<garnish>Zitronenring, Maraschinokirsche</garnish>
 			<recipe>
 				<ingredient amount="1.5" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="4.5" unit="cl" substance="Beefeater 24 London Dry Gin" />
@@ -858,7 +855,7 @@
 		</drink>
 
 		<drink>
-			<id>3831aaaf-3c75-4981-b951-7a2057f73350</id>
+			<id>F086C8AB-DF0C-4ECD-AE63-90D9CBFEE380</id>
 			<name>Moscow Mule</name>
 			<teaser>Wodka, Ginger Beer, Limettensaft, Minze</teaser>
 			<image>KRO00805.jpg</image>
@@ -870,16 +867,19 @@
 
 				(Wikipedia)
 			</description>
-			<glass>Longdrink</glass>
+			<glass>Kupferbecher</glass>
 			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<garnish>Minze</garnish>
 			<recipe>
+				<ingredient amount="3" unit="cl" substance="Frischer Limettensaft" />
+				<ingredient amount="6" unit="cl" substance="Wodka" />
+				<ingredient substance="Minze" />
+				<ingredient substance="Ginger Beer" />
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>8c995fe0-9409-45ec-9848-6e30b02a355c</id>
+			<id>5E2352E8-0FA6-45FA-A1A7-015EDEDBE7D3</id>
 			<name>White Russian</name>
 			<teaser>Wodka, Kaffeelikör, Sahne</teaser>
 			<image>KRO00081.jpg</image>
@@ -891,9 +891,9 @@
 
 				(Wikipedia)
 			</description>
-			<glass>Longdrink</glass>
+			<glass>Old Fashioned</glass>
 			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<garnish>Muskatnuss</garnish>
 			<recipe>
 				<ingredient amount="6" unit="cl" substance="Wodka" />
 				<ingredient amount="3" unit="cl" substance="Kahlua Kaffeelikör" />
@@ -902,9 +902,8 @@
 			</recipe>
 		</drink>
 
-
 		<drink>
-			<id>bcd3df96-8232-4a43-b1a8-bdb88cc009f9</id>
+			<id>FC449B45-A473-4DC4-9EA6-7F1915AC9522</id>
 			<name>Zombie</name>
 			<teaser>Rum, Limettensaft, Falernum, Maraschino</teaser>
 			<image>KRO00002.jpg</image>
@@ -920,9 +919,9 @@
 
 				(Wikipedia)
 			</description>
-			<glass>Longdrink</glass>
-			<ice>Cubed</ice>
-			<garnish>Orangenscheibe</garnish>
+			<glass>Tikibecher</glass>
+			<ice>Crushed</ice>
+			<garnish>Minze, Ananasstück</garnish>
 			<recipe>
 				<ingredient amount="2.5" unit="cl" substance="Frischer Limettensaft" />
 				<ingredient amount="2" unit="cl" substance="Frischer Grapefruitsaft" />
