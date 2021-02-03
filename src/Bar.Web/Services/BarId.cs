@@ -92,7 +92,7 @@ namespace Bar.Web.Services
         /// True, if the specified instance is equal to the current instance; otherwise, False.</returns>
         public override Boolean Equals(Object obj)
         {
-            return obj is BarId && Equals((BarId) obj);
+            return obj is BarId id && Equals(id);
         }
 
         /// <summary>

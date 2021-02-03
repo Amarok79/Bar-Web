@@ -29,10 +29,10 @@ namespace Bar.Web.Shared
 {
     public static class Urls
     {
-        public static String Cocktails = "/cocktails";
+        public static readonly String Cocktails = "/cocktails";
 
-        public static String Gins = "/gins";
+        public static readonly String Gins = "/gins";
 
-        public static String Rums = "/rums";
+        public static readonly String Rums = "/rums";
     }
 }

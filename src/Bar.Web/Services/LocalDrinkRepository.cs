@@ -56,15 +56,13 @@ namespace Bar.Web.Services
             var fileInfo = mWebHostEnvironment.WebRootFileProvider.GetFileInfo("drinks.xml");
 
             if (!fileInfo.Exists)
-            {
                 return Array.Empty<Drink>();
-            }
 
             return _LoadFromManifest(barId, fileInfo.PhysicalPath);
         }
 
 
-        private List<Drink> _LoadFromManifest(BarId barId, String manifestPath)
+        private static List<Drink> _LoadFromManifest(BarId barId, String manifestPath)
         {
             var doc         = XDocument.Load(manifestPath);
             var catalogNode = doc.Element("catalog");
@@ -83,6 +81,7 @@ namespace Bar.Web.Services
 
             foreach (var drinkNode in catalogNode.Element("drinks").Elements("drink"))
             {
+                var id      = drinkNode.Element("id").Value;
                 var name    = drinkNode.Element("name").Value;
                 var teaser  = drinkNode.Element("teaser").Value;
                 var image   = drinkNode.Element("image").Value;
@@ -92,14 +91,17 @@ namespace Bar.Web.Services
                 var ice     = drinkNode.Element("ice")?.Value;
                 var garnish = drinkNode.Element("garnish")?.Value;
 
-                var drink = new Drink(new DrinkId(Guid.NewGuid()), barId).SetName(name.Trim())
-                                                                         .SetTeaser(teaser.Trim())
-                                                                         .SetImage(image)
-                                                                         .SetDescription(_TrimDescription(desc))
-                                                                         .SetTags(_SplitAndTrimTags(tags))
-                                                                         .SetGlass(glass?.Trim() ?? String.Empty)
-                                                                         .SetIce(ice?.Trim() ?? String.Empty)
-                                                                         .SetGarnish(garnish?.Trim() ?? String.Empty);
+                var key = _MakeKey(name);
+
+                var drink = new Drink(new DrinkId(new Guid(id)), barId).SetName(name.Trim())
+                   .SetKey(key)
+                   .SetTeaser(teaser.Trim())
+                   .SetImage(image)
+                   .SetDescription(_TrimDescription(desc))
+                   .SetTags(_SplitAndTrimTags(tags))
+                   .SetGlass(glass?.Trim() ?? String.Empty)
+                   .SetIce(ice?.Trim() ?? String.Empty)
+                   .SetGarnish(garnish?.Trim() ?? String.Empty);
 
                 Ingredient[] ingredients  = null;
                 String[]     instructions = null;
@@ -109,35 +111,31 @@ namespace Bar.Web.Services
                 if (recipeNode != null)
                 {
                     ingredients = recipeNode.Elements("ingredient")
-                                            .Select(
-                                                 x => {
-                                                     var amount    = x.Attribute("amount")?.Value;
-                                                     var unit      = x.Attribute("unit")?.Value;
-                                                     var substance = x.Attribute("substance").Value;
+                       .Select(
+                            x => {
+                                var amount    = x.Attribute("amount")?.Value;
+                                var unit      = x.Attribute("unit")?.Value;
+                                var substance = x.Attribute("substance").Value;
 
-                                                     if (substance.StartsWith("@", StringComparison.Ordinal))
-                                                     {
-                                                         var substanceId = substance.Substring(1);
+                                if (substance.StartsWith("@", StringComparison.Ordinal))
+                                {
+                                    var substanceId = substance[1..];
 
-                                                         if (substances.TryGetValue(substanceId, out var substanceName))
-                                                         {
-                                                             substance = substanceName;
-                                                         }
-                                                     }
+                                    if (substances.TryGetValue(substanceId, out var substanceName))
+                                        substance = substanceName;
+                                }
 
-                                                     if (amount == null && unit == null)
-                                                     {
-                                                         return new Ingredient(substance);
-                                                     }
+                                if (amount == null && unit == null)
+                                    return new Ingredient(substance);
 
-                                                     return new Ingredient(
-                                                         Double.Parse(amount, CultureInfo.InvariantCulture),
-                                                         unit,
-                                                         substance
-                                                     );
-                                                 }
-                                             )
-                                            .ToArray();
+                                return new Ingredient(
+                                    Double.Parse(amount, CultureInfo.InvariantCulture),
+                                    unit,
+                                    substance
+                                );
+                            }
+                        )
+                       .ToArray();
 
                     instructions = recipeNode.Elements("instruction").Select(x => x.Value?.Trim()).ToArray();
                 }
@@ -152,12 +150,22 @@ namespace Bar.Web.Services
             return drinks;
         }
 
+        private static String _MakeKey(String name)
+        {
+            return name.Replace("  ", " ")
+               .Replace(" ", "-")
+               .Replace("&", "")
+               .Replace("'", "")
+               .Replace("(", "")
+               .Replace(")", "")
+               .Replace("--", "-")
+               .ToLower();
+        }
+
         private static String _TrimDescription(String text)
         {
             if (text == null)
-            {
                 return String.Empty;
-            }
 
             var lines = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -166,9 +174,7 @@ namespace Bar.Web.Services
             foreach (var line in lines)
             {
                 if (sb.Length > 0)
-                {
                     sb.AppendLine();
-                }
 
                 sb.AppendLine(line.Trim());
             }
@@ -179,13 +185,11 @@ namespace Bar.Web.Services
         private static String[] _SplitAndTrimTags(String text)
         {
             if (text == null)
-            {
                 return Array.Empty<String>();
-            }
 
             var tags = text.Split(new[] { '|', ';', ',' }, StringSplitOptions.RemoveEmptyEntries)
-                           .Select(x => x.Trim())
-                           .ToArray();
+               .Select(x => x.Trim())
+               .ToArray();
 
             return tags;
         }
