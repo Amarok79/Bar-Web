@@ -1,7 +1,8 @@
 ﻿@page "/rums"
-@inject IRumRepository Repository
 
-<PageLayout HeaderVisible="false" BannerVisible="true" BannerText="Rum">
+<PageLayout BannerText="Rum"
+            BannerVisible="true"
+            HeaderVisible="false">
 
     <ChildContent>
         <p class="item-page-title">Unser Rum Sortiment</p>
@@ -9,34 +10,17 @@
         <p class="item-page-subtitle">Rum oder Rhum. Hauptsache genießen.</p>
 
         <div class="item-container">
-            @if (mItems != null) {
-                @foreach (var item in mItems) {
-                    <div class="item">
-                        <img class="item-image" src="@(Utils.GetLowResRumImagePath(item.Image))"/>
-                        <p class="item-title">@item.Name</p>
-                        <p class="item-subtitle">@item.Teaser</p>
-                    </div>
-                }
+            @foreach (var item in mItems) {
+                <Card Image="@(Urls.GetLowResRumImage(item.Image))"
+                      SubTitle="@item.Teaser"
+                      Title="@item.Name">
+                </Card>
             }
         </div>
     </ChildContent>
 
     <FooterContent>
-        <Navigation/>
+        <Navigation />
     </FooterContent>
 
 </PageLayout>
-
-
-@code {
-
-    IEnumerable<Rum> mItems;
-
-    protected override async Task OnInitializedAsync() {
-        mItems = Utils.CreateEmptyRums();
-        await Task.Delay(50);
-        mItems = await Repository.GetAllAsync();
-        mItems = mItems.OrderBy(x => x.Name);
-    }
-
-}
