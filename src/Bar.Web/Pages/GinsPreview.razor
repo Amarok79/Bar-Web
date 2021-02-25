@@ -1,30 +1,16 @@
-﻿@inject IGinRepository Repository
-
-<p class="preview-title">Unsere Gins</p>
+﻿<p class="preview-title">Unsere Gins</p>
 
 <div class="item-container">
-    @if (mItems != null) {
-        @foreach (var item in mItems) {
-            <div class="item">
-                <img class="item-image" src="@(Utils.GetLowResGinImagePath(item.Image))"/>
-                <p class="item-title">@item.Name</p>
-                <p class="item-subtitle">@item.Teaser</p>
-            </div>
-        }
+    @foreach (var item in mItems) {
+        <Card Image="@(Urls.GetLowResGinImage(item.Image))"
+              SubTitle="@item.Teaser"
+              Title="@item.Name">
+        </Card>
     }
 </div>
 
-<a href="@Urls.Gins" class="btn btn-dark" style="margin: 20px 0 40px 0">Alle Gins</a>
-
-
-@code {
-
-    IEnumerable<Gin> mItems;
-
-    protected override async Task OnInitializedAsync() {
-        mItems = Utils.CreateEmptyGins();
-        await Task.Delay(50);
-        mItems = ( await Repository.GetAllAsync() ).TakeRandom(4);
-    }
-
-}
+<a class="btn btn-dark"
+   href="@Urls.Gins"
+   style="margin: 20px 0 40px 0">
+    Alle Gins
+</a>
