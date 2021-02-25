@@ -10,7 +10,7 @@
     <ChildContent>
 
         <img class="detail-image"
-             src="@(Utils.GetHighResDrinkImagePath(mDrink.Image))"/>
+             src="@(Utils.GetHighResDrinkImagePath(mDrink.Image))" />
 
         <div class="detail-pane-ingredients"
              hidden="@(mDrink.Recipe.Ingredients.Count == 0)">
@@ -66,7 +66,7 @@
     </ChildContent>
 
     <FooterContent>
-        <Navigation/>
+        <Navigation />
     </FooterContent>
 
 </PageLayout>
