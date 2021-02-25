@@ -3,7 +3,9 @@
 @inject NavigationManager NavigationManager
 
 
-<PageLayout HeaderVisible="false" BannerVisible="true" BannerText="Cocktails">
+<PageLayout BannerText="Cocktails"
+            BannerVisible="true"
+            HeaderVisible="false">
 
     <ChildContent>
         <p class="item-page-title">Unsere Cocktails</p>
@@ -13,8 +15,10 @@
         <div class="item-container">
             @if (mItems != null) {
                 @foreach (var item in mItems) {
-                    <div class="item " @onclick="() => _HandleClicked(item)">
-                        <img class="item-image item-clickable" src="@(Utils.GetLowResDrinkImagePath(item.Image))"/>
+                    <div class="item " @
+                         onclick="() => _HandleClicked(item)">
+                        <img class="item-clickable item-image"
+                             src="@(Utils.GetLowResDrinkImagePath(item.Image))"/>
                         <p class="item-title">@item.Name</p>
                         <p class="item-subtitle">@item.Teaser</p>
                     </div>

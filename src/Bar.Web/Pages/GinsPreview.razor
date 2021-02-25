@@ -6,7 +6,8 @@
     @if (mItems != null) {
         @foreach (var item in mItems) {
             <div class="item">
-                <img class="item-image" src="@(Utils.GetLowResGinImagePath(item.Image))"/>
+                <img class="item-image"
+                     src="@(Utils.GetLowResGinImagePath(item.Image))"/>
                 <p class="item-title">@item.Name</p>
                 <p class="item-subtitle">@item.Teaser</p>
             </div>
@@ -14,7 +15,11 @@
     }
 </div>
 
-<a href="@Urls.Gins" class="btn btn-dark" style="margin: 20px 0 40px 0">Alle Gins</a>
+<a class="btn btn-dark"
+   href="@Urls.Gins"
+   style="margin: 20px 0 40px 0">
+    Alle Gins
+</a>
 
 
 @code {
