@@ -1,19 +1,12 @@
-﻿@inject IDrinkRepository Repository
-@inject NavigationManager NavigationManager
-
-
-<p class="preview-title">Unsere Cocktails</p>
+﻿<p class="preview-title">Unsere Cocktails</p>
 
 <div class="item-container">
-    @if (mItems != null) {
-        @foreach (var item in mItems) {
-            <div class="item" @onclick="() => _HandleClicked(item)">
-                <img class="item-clickable item-image"
-                     src="@(Utils.GetLowResDrinkImagePath(item.Image))" />
-                <p class="item-title">@item.Name</p>
-                <p class="item-subtitle">@item.Teaser</p>
-            </div>
-        }
+    @foreach (var item in mItems) {
+        <Card ClickAction="@(() => _HandleClicked(item))"
+              Image="@(Urls.GetLowResDrinkImage(item.Image))"
+              SubTitle="@item.Teaser"
+              Title="@item.Name">
+        </Card>
     }
 </div>
 
@@ -22,21 +15,3 @@
    style="margin: 20px 0 40px 0">
     Alle Cocktails
 </a>
-
-
-@code {
-
-    IEnumerable<Drink> mItems;
-
-    protected override async Task OnInitializedAsync() {
-        mItems = Utils.CreateEmptyDrinks();
-        await Task.Delay(50);
-        var id = new BarId(Guid.Empty);
-        mItems = ( await Repository.GetAllAsync(id) ).TakeRandom(4);
-    }
-
-    void _HandleClicked(Drink item) {
-        NavigationManager.NavigateTo($"/cocktail/{item.Key}");
-    }
-
-}

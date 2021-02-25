@@ -1,0 +1,27 @@
+﻿<div class="item"
+     @onclick="@(() => ClickAction?.Invoke())">
+    <img class="item-image @ImageClickableStyle"
+         src="@Image" />
+    <p class="item-title">@Title</p>
+    <p class="item-subtitle">@SubTitle</p>
+</div>
+
+
+@code {
+
+    [Parameter]
+    public String Image { get; set; }
+
+    [Parameter]
+    public String Title { get; set; }
+
+    [Parameter]
+    public String SubTitle { get; set; }
+
+    [Parameter, CanBeNull]
+    public Action ClickAction { get; set; }
+
+
+    private String ImageClickableStyle => ClickAction != null ? "item-clickable" : null;
+
+}
