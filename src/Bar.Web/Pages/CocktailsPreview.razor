@@ -7,8 +7,7 @@
 <div class="item-container">
     @if (mItems != null) {
         @foreach (var item in mItems) {
-            <div class="item" @
-                 onclick="() => _HandleClicked(item)">
+            <div class="item" @onclick="() => _HandleClicked(item)">
                 <img class="item-clickable item-image"
                      src="@(Utils.GetLowResDrinkImagePath(item.Image))" />
                 <p class="item-title">@item.Name</p>
