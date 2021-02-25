@@ -3,13 +3,17 @@
 @inject NavigationManager NavigationManager
 
 
-<PageLayout HeaderVisible="false" BannerVisible="true" BannerText="@mDrink?.Name">
+<PageLayout BannerText="@mDrink?.Name"
+            BannerVisible="true"
+            HeaderVisible="false">
 
     <ChildContent>
 
-        <img class="detail-image" src="@(Utils.GetHighResDrinkImagePath(mDrink.Image))"/>
+        <img class="detail-image"
+             src="@(Utils.GetHighResDrinkImagePath(mDrink.Image))"/>
 
-        <div class="detail-pane-ingredients" hidden="@(mDrink.Recipe.Ingredients.Count == 0)">
+        <div class="detail-pane-ingredients"
+             hidden="@(mDrink.Recipe.Ingredients.Count == 0)">
             <p class="detail-title">Rezeptur</p>
             <table>
                 @foreach (var ingredient in mDrink.Recipe.Ingredients) {
@@ -23,12 +27,16 @@
         </div>
 
         <div class="detail-pane-glassiceetc">
-            <div hidden="@(String.IsNullOrEmpty(mDrink.Glass))" class="float-left" style="margin-right: 100px">
+            <div class="float-left"
+                 hidden="@(String.IsNullOrEmpty(mDrink.Glass))"
+                 style="margin-right: 100px">
                 <p class="detail-title">Glas</p>
                 <p class="detail-text">@mDrink.Glass</p>
             </div>
 
-            <div hidden="@(String.IsNullOrEmpty(mDrink.Ice))" class="float-left" style="margin-right: 100px">
+            <div class="float-left"
+                 hidden="@(String.IsNullOrEmpty(mDrink.Ice))"
+                 style="margin-right: 100px">
                 <p class="detail-title">Eis</p>
                 <p class="detail-text">@mDrink.GetTranslatedIce()</p>
             </div>
@@ -39,7 +47,8 @@
             </div>
         </div>
 
-        <div class="detail-pane-instructions" hidden="@(mDrink.Recipe.Instructions.Count == 0)">
+        <div class="detail-pane-instructions"
+             hidden="@(mDrink.Recipe.Instructions.Count == 0)">
             <p class="detail-title">Arbeitsschritte</p>
             <ol>
                 @foreach (var instruction in mDrink.Recipe.Instructions) {
@@ -48,7 +57,8 @@
             </ol>
         </div>
 
-        <div class="detail-pane-description" hidden="@(String.IsNullOrEmpty(mDrink.Description))">
+        <div class="detail-pane-description"
+             hidden="@(String.IsNullOrEmpty(mDrink.Description))">
             <p class="detail-title">Beschreibung</p>
             <p class="detail-text">@mDrink.Description</p>
         </div>

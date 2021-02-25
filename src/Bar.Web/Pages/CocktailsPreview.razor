@@ -7,8 +7,10 @@
 <div class="item-container">
     @if (mItems != null) {
         @foreach (var item in mItems) {
-            <div class="item" @onclick="() => _HandleClicked(item)">
-                <img class="item-image item-clickable" src="@(Utils.GetLowResDrinkImagePath(item.Image))"/>
+            <div class="item" @
+                 onclick="() => _HandleClicked(item)">
+                <img class="item-clickable item-image"
+                     src="@(Utils.GetLowResDrinkImagePath(item.Image))"/>
                 <p class="item-title">@item.Name</p>
                 <p class="item-subtitle">@item.Teaser</p>
             </div>
@@ -16,7 +18,11 @@
     }
 </div>
 
-<a href="@Urls.Cocktails" class="btn btn-dark" style="margin: 20px 0 40px 0">Alle Cocktails</a>
+<a class="btn btn-dark"
+   href="@Urls.Cocktails"
+   style="margin: 20px 0 40px 0">
+    Alle Cocktails
+</a>
 
 
 @code {

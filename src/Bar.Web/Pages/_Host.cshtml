@@ -9,15 +9,19 @@
 <html lang="de">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="width=device-width, initial-scale=1.0"
+          name="viewport"/>
     <title>Die "KroKo" Hausbar</title>
     <base href="~/"/>
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/site.css" rel="stylesheet"/>
+    <link href="css/bootstrap/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link href="css/site.css"
+          rel="stylesheet"/>
 </head>
 <body>
 
-<component type="typeof(App)" render-mode="Server"/>
+<component render-mode="Server"
+           type="typeof(App)"/>
 
 <div id="blazor-error-ui">
     <environment include="Staging,Production">

@@ -1,7 +1,9 @@
 ﻿@page "/gins"
 @inject IGinRepository Repository
 
-<PageLayout HeaderVisible="false" BannerVisible="true" BannerText="Gin">
+<PageLayout BannerText="Gin"
+            BannerVisible="true"
+            HeaderVisible="false">
 
     <ChildContent>
         <p class="item-page-title">Unser Gin Sortiment</p>
@@ -12,7 +14,8 @@
             @if (mItems != null) {
                 @foreach (var item in mItems) {
                     <div class="item">
-                        <img class="item-image" src="@(Utils.GetLowResGinImagePath(item.Image))"/>
+                        <img class="item-image"
+                             src="@(Utils.GetLowResGinImagePath(item.Image))"/>
                         <p class="item-title">@item.Name</p>
                         <p class="item-subtitle">@item.Teaser</p>
                     </div>
