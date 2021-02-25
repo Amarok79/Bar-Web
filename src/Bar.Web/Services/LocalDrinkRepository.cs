@@ -29,6 +29,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Bar.Web.Shared;
 using Microsoft.AspNetCore.Hosting;
 
 
@@ -51,14 +52,14 @@ namespace Bar.Web.Services
         /// <summary>
         /// Gets all Drinks for the given Bar.
         /// </summary>
-        public async Task<IEnumerable<Drink>> GetAllAsync(BarId barId)
+        public Task<IEnumerable<Drink>> GetAllAsync(BarId barId)
         {
             var fileInfo = mWebHostEnvironment.WebRootFileProvider.GetFileInfo("drinks.xml");
 
             if (!fileInfo.Exists)
-                return Array.Empty<Drink>();
+                return Array.Empty<Drink>().AsEnumerable().AsTask();
 
-            return _LoadFromManifest(barId, fileInfo.PhysicalPath);
+            return _LoadFromManifest(barId, fileInfo.PhysicalPath).AsEnumerable().AsTask();
         }
 
 
