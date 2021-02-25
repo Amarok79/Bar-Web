@@ -39,7 +39,7 @@ namespace Bar.Web
         public static IHostBuilder CreateHostBuilder(String[] args)
         {
             return Host.CreateDefaultBuilder(args)
-               .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
+               .ConfigureWebHostDefaults(builder => { builder.UseStartup<Startup>(); });
         }
     }
 }
