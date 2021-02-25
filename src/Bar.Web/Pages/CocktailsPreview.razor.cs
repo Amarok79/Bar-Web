@@ -1,6 +1,6 @@
 ﻿/* MIT License
  * 
- * Copyright (c) 2020, Olaf Kober
+ * Copyright (c) 2021, Olaf Kober
  * https://github.com/Amarok79/Bar-Web
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,48 +24,42 @@
 
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using Bar.Web.Services;
+using Bar.Web.Shared;
+using Microsoft.AspNetCore.Components;
 
 
-namespace Bar.Web.Shared
+namespace Bar.Web.Pages
 {
-    public static class Utils
+    partial class CocktailsPreview
     {
-        public static IEnumerable<T> TakeRandom<T>(this IEnumerable<T> items, Int32 count)
+        private IEnumerable<Drink> mItems;
+
+
+        [Inject]
+        public IDrinkRepository Repository { get; set; }
+
+        [Inject]
+        public NavigationManager NavigationManager { get; set; }
+
+
+        protected override async Task OnInitializedAsync()
         {
-            var used   = new List<Int32>();
-            var result = new List<T>();
-            var random = new Random();
-            var total  = items.Count();
+            // display dummy items
+            mItems = Utils.CreateEmptyDrinks();
 
-            while (result.Count != count)
-            {
-                var index = random.Next(total);
+            await Task.Delay(50);
 
-                if (used.Contains(index))
-                    continue;
-
-                result.Add(items.Skip(index - 1).First());
-                used.Add(index);
-            }
-
-            return result;
+            // load and render real items
+            var id = new BarId(Guid.Empty);
+            mItems = ( await Repository.GetAllAsync(id) ).TakeRandom(4);
         }
 
-        public static IEnumerable<Drink> CreateEmptyDrinks(Int32 count = 4)
-        {
-            return Enumerable.Repeat(new Drink(default, default), count);
-        }
 
-        public static IEnumerable<Gin> CreateEmptyGins(Int32 count = 4)
+        private void _HandleClicked(Drink item)
         {
-            return Enumerable.Repeat(new Gin(), count);
-        }
-
-        public static IEnumerable<Rum> CreateEmptyRums(Int32 count = 4)
-        {
-            return Enumerable.Repeat(new Rum(), count);
+            NavigationManager.NavigateTo(Urls.GetCocktailUrl(item));
         }
     }
 }

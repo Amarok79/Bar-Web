@@ -1,5 +1,4 @@
 ﻿@page "/gins"
-@inject IGinRepository Repository
 
 <PageLayout BannerText="Gin"
             BannerVisible="true"
@@ -11,15 +10,11 @@
         <p class="item-page-subtitle">Pur, On the Rocks oder mit Premium Tonic Water.</p>
 
         <div class="item-container">
-            @if (mItems != null) {
-                @foreach (var item in mItems) {
-                    <div class="item">
-                        <img class="item-image"
-                             src="@(Utils.GetLowResGinImagePath(item.Image))" />
-                        <p class="item-title">@item.Name</p>
-                        <p class="item-subtitle">@item.Teaser</p>
-                    </div>
-                }
+            @foreach (var item in mItems) {
+                <Card Image="@(Urls.GetLowResGinImage(item.Image))"
+                      SubTitle="@item.Teaser"
+                      Title="@item.Name">
+                </Card>
             }
         </div>
     </ChildContent>
@@ -29,17 +24,3 @@
     </FooterContent>
 
 </PageLayout>
-
-
-@code {
-
-    IEnumerable<Gin> mItems;
-
-    protected override async Task OnInitializedAsync() {
-        mItems = Utils.CreateEmptyGins();
-        await Task.Delay(50);
-        mItems = await Repository.GetAllAsync();
-        mItems = mItems.OrderBy(x => x.Name);
-    }
-
-}

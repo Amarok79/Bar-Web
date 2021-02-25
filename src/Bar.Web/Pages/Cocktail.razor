@@ -1,7 +1,4 @@
-@page "/cocktail/{key}"
-@inject IDrinkRepository Repository
-@inject NavigationManager NavigationManager
-
+@page "/cocktails/{key}"
 
 <PageLayout BannerText="@mDrink?.Name"
             BannerVisible="true"
@@ -10,7 +7,7 @@
     <ChildContent>
 
         <img class="detail-image"
-             src="@(Utils.GetHighResDrinkImagePath(mDrink.Image))" />
+             src="@(Urls.GetLowResDrinkImage(mDrink.Image))" />
 
         <div class="detail-pane-ingredients"
              hidden="@(mDrink.Recipe.Ingredients.Count == 0)">
@@ -70,19 +67,3 @@
     </FooterContent>
 
 </PageLayout>
-
-
-@code {
-
-    [Parameter]
-    public String Key { get; set; }
-
-    private Drink mDrink;
-
-    protected override async Task OnInitializedAsync() {
-        var barId = new BarId(Guid.Empty);
-        IEnumerable<Drink> drinks = await Repository.GetAllAsync(barId);
-        mDrink = drinks.FirstOrDefault(x => x.Key.Equals(Key, StringComparison.OrdinalIgnoreCase));
-    }
-
-}

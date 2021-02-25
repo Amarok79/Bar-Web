@@ -1,17 +1,11 @@
-﻿@inject IRumRepository Repository
-
-<p class="preview-title">Unsere Rums</p>
+﻿<p class="preview-title">Unsere Rums</p>
 
 <div class="item-container">
-    @if (mItems != null) {
-        @foreach (var item in mItems) {
-            <div class="item">
-                <img class="item-image"
-                     src="@(Utils.GetLowResRumImagePath(item.Image))" />
-                <p class="item-title">@item.Name</p>
-                <p class="item-subtitle">@item.Teaser</p>
-            </div>
-        }
+    @foreach (var item in mItems) {
+        <Card Image="@(Urls.GetLowResRumImage(item.Image))"
+              SubTitle="@item.Teaser"
+              Title="@item.Name">
+        </Card>
     }
 </div>
 
@@ -20,16 +14,3 @@
    style="margin: 20px 0 0 0">
     Alle Rums
 </a>
-
-
-@code {
-
-    IEnumerable<Rum> mItems;
-
-    protected override async Task OnInitializedAsync() {
-        mItems = Utils.CreateEmptyRums();
-        await Task.Delay(50);
-        mItems = ( await Repository.GetAllAsync() ).TakeRandom(4);
-    }
-
-}
