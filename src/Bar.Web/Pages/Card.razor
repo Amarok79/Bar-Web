@@ -2,8 +2,10 @@
      @onclick="@(() => ClickAction?.Invoke())">
     <img class="item-image @ImageClickableStyle"
          src="@Image" />
-    <p class="item-title">@Title</p>
-    <p class="item-subtitle">@SubTitle</p>
+    <div class="item-footer">
+        <p class="item-title">@Title</p>
+        <p class="item-subtitle">@SubTitle</p>
+    </div>
 </div>
 
 
