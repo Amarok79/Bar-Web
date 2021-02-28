@@ -204,25 +204,22 @@ html, body {
   width: 100%;
 }
 
+.item-footer {
+  bottom: 0;
+  position: absolute;
+}
+
 .item-title {
-  bottom: 24px;
   font-size: 22px;
   font-weight: bold;
   margin: 12px 12px;
-  position: absolute;
   text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
 }
 
 .item-subtitle {
-  bottom: 0;
   font-size: 14px;
   margin: 12px 12px;
-  overflow: hidden;
-  position: absolute;
-  text-overflow: ellipsis;
   text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
-  white-space: nowrap;
-  width: 280px;
 }
 
 
