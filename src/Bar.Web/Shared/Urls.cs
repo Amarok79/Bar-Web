@@ -22,22 +22,30 @@ namespace Bar.Web.Shared
 
         public static String GetLowResDrinkImage(String image)
         {
-            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/drink/low/{image}";
+            return String.IsNullOrEmpty(image)
+                ? "https://amarok.blob.core.windows.net/bar/none.jpg"
+                : $"https://amarok.blob.core.windows.net/bar/drink/low/{image}";
         }
 
         public static String GetHighResDrinkImage(String image)
         {
-            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/drink/high/{image}";
+            return String.IsNullOrEmpty(image)
+                ? "https://amarok.blob.core.windows.net/bar/none.jpg"
+                : $"https://amarok.blob.core.windows.net/bar/drink/high/{image}";
         }
 
         public static String GetLowResGinImage(String image)
         {
-            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/gin/low/{image}";
+            return String.IsNullOrEmpty(image)
+                ? "https://amarok.blob.core.windows.net/bar/none.jpg"
+                : $"https://amarok.blob.core.windows.net/bar/gin/low/{image}";
         }
 
         public static String GetLowResRumImage(String image)
         {
-            return String.IsNullOrEmpty(image) ? "/images/none.jpg" : $"/images/rum/low/{image}";
+            return String.IsNullOrEmpty(image)
+                ? "https://amarok.blob.core.windows.net/bar/none.jpg"
+                : $"https://amarok.blob.core.windows.net/bar/rum/low/{image}";
         }
     }
 }
