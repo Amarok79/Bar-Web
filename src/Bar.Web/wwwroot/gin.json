@@ -1,124 +1,124 @@
 ﻿{
-  "gins": [
-    {
-      "name": "Aeijst Barrel-Aged Dry Gin",
-      "teaser": "Styrian Gin",
-      "images": ["KRO01006.jpg", "KRO00378.jpg"]
-    },
-    {
-      "name": "Aeijst Umbra Gin",
-      "teaser": "Styrian Gin",
-      "images": ["KRO01010.jpg"]
-    },
-    {
-      "name": "Aeijst Pale Gin",
-      "teaser": "Styrian Gin",
-      "images": ["KRO01013.jpg", "KRO00371.jpg"]
-    },
-    {
-      "name": "Aeijst Peat Gin",
-      "teaser": "Styrian Gin",
-      "images": ["KRO01016.jpg"]
-    },
-    {
-      "name": "Beate & Reinmund Reiterer",
-      "teaser": "Styrian Gin",
-      "images": ["KRO01019.jpg"]
-    },
-    {
-      "name": "#1",
-      "teaser": "Selbst-Gebrautes Teufelszeug",
-      "images": ["KRO01021.jpg"]
-    },
-    {
-      "name": "The Good Gin",
-      "teaser": "Essence of Life",
-      "images": ["KRO01025.jpg", "KRO00380.jpg"]
-    },
-    {
-      "name": "Gletscher Gin",
-      "teaser": "See Destillerie, Salzkammergut",
-      "images": ["KRO01028.jpg", "KRO00365.jpg"]
-    },
-    {
-      "name": "O•Gin",
-      "teaser": "Destillerie Farthofer",
-      "images": ["KRO01030.jpg", "KRO00376.jpg"]
-    },
-    {
-      "name": "Holy Gin Marille",
-      "teaser": "Feindestillerie Hochstrasser",
-      "images": ["KRO01034.jpg", "KRO00373.jpg"]
-    },
-    {
-      "name": "Toplitz Gin",
-      "teaser": "See Destillerie, Salzkammergut",
-      "images": ["KRO01037.jpg", "KRO00368.jpg"]
-    },
-    {
-      "name": "Fuxbau",
-      "teaser": "Distilled Gin",
-      "images": ["KRO01039.jpg", "KRO00491.jpg"]
-    },
-    {
-      "name": "Hagmoar G.I.N.",
-      "teaser": "Österreich, Saalfelden",
-      "images": ["KRO01041.jpg", "KRO00746.jpg"]
-    },
-    {
-      "name": "The Stin Dry Gin",
-      "teaser": "Styrian Dry Gin",
-      "images": ["KRO01046.jpg", "KRO00364.jpg"]
-    },
-    {
-      "name": "Wieser Wahouua Gin",
-      "teaser": "Bitter Pink",
-      "images": ["KRO01048.jpg", "KRO00743.jpg"]
-    },
-    {
-      "name": "Sinnesfreuden",
-      "teaser": "Neber-Hagemann, Österreich",
-      "images": ["KRO01052.jpg", "KRO00488.jpg"]
-    },
-    {
-      "name": "The Stin Sloe Gin",
-      "teaser": "Styrian Sloe Gin",
-      "images": ["KRO01055.jpg", "KRO00360.jpg"]
-    },
-    {
-      "name": "The Duke",
-      "teaser": "Munich Dry Gin",
-      "images": ["KRO01056.jpg", "KRO00389.jpg"]
-    },
-    {
-      "name": "Hayman's of London",
-      "teaser": "True English Old Tom Gin",
-      "images": ["KRO01061.jpg", "KRO00391.jpg"]
-    },
-    {
-      "name": "Plymouth Gin",
-      "teaser": "Original English Gin",
-      "images": ["KRO01064.jpg", "KRO00393.jpg"]
-    },
-    {
-      "name": "Brockmans",
-      "teaser": "Intensely Smooth Premium Gin",
-      "images": ["KRO01068.jpg", "KRO00399.jpg"]
-    },
-    {
-      "name": "Burleighs London Dry Gin",
-      "teaser": "Made in England",
-      "images": ["KRO01072.jpg", "KRO00370.jpg"]
-    },
-    {
-      "name": "Beefeater 24",
-      "teaser": "Authentic London Cut",
-      "images": ["KRO01076.jpg", "KRO00402.jpg"]
-    },
-    {
-      "name": "Danger Line Classic Edition",
-      "teaser": "Distillery Krauss, Styria",
-      "images": ["KRO01079.jpg", "KRO00401.jpg"]
-    }
-  ]
+    "gins": [
+        {
+            "name": "Aeijst Barrel-Aged Dry Gin",
+            "teaser": "Styrian Gin",
+            "images": ["KRO01006.jpg", "KRO00378.jpg"]
+        },
+        {
+            "name": "Aeijst Umbra Gin",
+            "teaser": "Styrian Gin",
+            "images": ["KRO01010.jpg"]
+        },
+        {
+            "name": "Aeijst Pale Gin",
+            "teaser": "Styrian Gin",
+            "images": ["KRO01013.jpg", "KRO00371.jpg"]
+        },
+        {
+            "name": "Aeijst Peat Gin",
+            "teaser": "Styrian Gin",
+            "images": ["KRO01016.jpg"]
+        },
+        {
+            "name": "Beate & Reinmund Reiterer",
+            "teaser": "Styrian Gin",
+            "images": ["KRO01019.jpg"]
+        },
+        {
+            "name": "#1",
+            "teaser": "Selbst-Gebrautes Teufelszeug",
+            "images": ["KRO01021.jpg"]
+        },
+        {
+            "name": "The Good Gin",
+            "teaser": "Essence of Life",
+            "images": ["KRO01025.jpg", "KRO00380.jpg"]
+        },
+        {
+            "name": "Gletscher Gin",
+            "teaser": "See Destillerie, Salzkammergut",
+            "images": ["KRO01028.jpg", "KRO00365.jpg"]
+        },
+        {
+            "name": "O•Gin",
+            "teaser": "Destillerie Farthofer",
+            "images": ["KRO01030.jpg", "KRO00376.jpg"]
+        },
+        {
+            "name": "Holy Gin Marille",
+            "teaser": "Feindestillerie Hochstrasser",
+            "images": ["KRO01034.jpg", "KRO00373.jpg"]
+        },
+        {
+            "name": "Toplitz Gin",
+            "teaser": "See Destillerie, Salzkammergut",
+            "images": ["KRO01037.jpg", "KRO00368.jpg"]
+        },
+        {
+            "name": "Fuxbau",
+            "teaser": "Distilled Gin",
+            "images": ["KRO01039.jpg", "KRO00491.jpg"]
+        },
+        {
+            "name": "Hagmoar G.I.N.",
+            "teaser": "Österreich, Saalfelden",
+            "images": ["KRO01041.jpg", "KRO00746.jpg"]
+        },
+        {
+            "name": "The Stin Dry Gin",
+            "teaser": "Styrian Dry Gin",
+            "images": ["KRO01046.jpg", "KRO00364.jpg"]
+        },
+        {
+            "name": "Wieser Wahouua Gin",
+            "teaser": "Bitter Pink",
+            "images": ["KRO01048.jpg", "KRO00743.jpg"]
+        },
+        {
+            "name": "Sinnesfreuden",
+            "teaser": "Neber-Hagemann, Österreich",
+            "images": ["KRO01052.jpg", "KRO00488.jpg"]
+        },
+        {
+            "name": "The Stin Sloe Gin",
+            "teaser": "Styrian Sloe Gin",
+            "images": ["KRO01055.jpg", "KRO00360.jpg"]
+        },
+        {
+            "name": "The Duke",
+            "teaser": "Munich Dry Gin",
+            "images": ["KRO01056.jpg", "KRO00389.jpg"]
+        },
+        {
+            "name": "Hayman's of London",
+            "teaser": "True English Old Tom Gin",
+            "images": ["KRO01061.jpg", "KRO00391.jpg"]
+        },
+        {
+            "name": "Plymouth Gin",
+            "teaser": "Original English Gin",
+            "images": ["KRO01064.jpg", "KRO00393.jpg"]
+        },
+        {
+            "name": "Brockmans",
+            "teaser": "Intensely Smooth Premium Gin",
+            "images": ["KRO01068.jpg", "KRO00399.jpg"]
+        },
+        {
+            "name": "Burleighs London Dry Gin",
+            "teaser": "Made in England",
+            "images": ["KRO01072.jpg", "KRO00370.jpg"]
+        },
+        {
+            "name": "Beefeater 24",
+            "teaser": "Authentic London Cut",
+            "images": ["KRO01076.jpg", "KRO00402.jpg"]
+        },
+        {
+            "name": "Danger Line Classic Edition",
+            "teaser": "Distillery Krauss, Styria",
+            "images": ["KRO01079.jpg", "KRO00401.jpg"]
+        }
+    ]
 }
