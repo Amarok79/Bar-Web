@@ -24,11 +24,12 @@ namespace Bar.Web
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient();
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_CONNECTIONSTRING"]);
 
-            services.AddTransient(typeof(IRumRepository), typeof(LocalRumRepository));
+            services.AddTransient(typeof(IRumRepository), typeof(BackendRumRepository));
             services.AddTransient(typeof(IGinRepository), typeof(LocalGinRepository));
             services.AddTransient(typeof(IDrinkRepository), typeof(LocalDrinkRepository));
         }
