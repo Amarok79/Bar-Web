@@ -30,7 +30,7 @@ namespace Bar.Web
             services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_CONNECTIONSTRING"]);
 
             services.AddTransient(typeof(IRumRepository), typeof(BackendRumRepository));
-            services.AddTransient(typeof(IGinRepository), typeof(LocalGinRepository));
+            services.AddTransient(typeof(IGinRepository), typeof(BackendGinRepository));
             services.AddTransient(typeof(IDrinkRepository), typeof(LocalDrinkRepository));
         }
 
