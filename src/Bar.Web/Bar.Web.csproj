@@ -20,10 +20,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Amarok.Contracts" Version="2.0.0" />
+		<PackageReference Include="Amarok.Contracts" Version="3.1.3" />
 		<PackageReference Include="Flurl.Http" Version="3.2.0" />
-		<PackageReference Include="JetBrains.Annotations" Version="2020.3.0" />
-		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.17.0" />
+		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.19.0" />
 	</ItemGroup>
 
 </Project>
