@@ -5,13 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace Bar.Web.Services
+namespace Bar.Web.Services;
+
+public sealed class Gin
 {
-    public sealed class Gin
-    {
-        public String Name { get; set; }
-        public String Teaser { get; set; }
-        public IList<String> Images { get; set; }
-        public String Image => Images?.FirstOrDefault();
-    }
+    public String Name { get; set; }
+    public String Teaser { get; set; }
+    public IList<String> Images { get; set; }
+    public String Image => Images?.FirstOrDefault();
 }

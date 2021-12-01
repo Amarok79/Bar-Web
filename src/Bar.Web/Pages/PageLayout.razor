@@ -39,7 +39,9 @@
 
     private String VersionNumber {
         get {
-            var ver = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
+            var ver = Assembly.GetExecutingAssembly()
+                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                ?.InformationalVersion;
             return $"Bar-Web v{ver}";
         }
     }

@@ -9,27 +9,26 @@ using Bar.Web.Shared;
 using Microsoft.AspNetCore.Components;
 
 
-namespace Bar.Web.Pages
+namespace Bar.Web.Pages;
+
+partial class Rums
 {
-    partial class Rums
+    private IEnumerable<Rum> mItems;
+
+
+    [Inject]
+    public IRumRepository Repository { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
     {
-        private IEnumerable<Rum> mItems;
+        // display dummy items
+        mItems = Utils.CreateEmptyRums();
 
+        await Task.Delay(50);
 
-        [Inject]
-        public IRumRepository Repository { get; set; }
-
-
-        protected override async Task OnInitializedAsync()
-        {
-            // display dummy items
-            mItems = Utils.CreateEmptyRums();
-
-            await Task.Delay(50);
-
-            // load and render real items
-            mItems = await Repository.GetAllAsync();
-            mItems = mItems.OrderBy(x => x.Name);
-        }
+        // load and render real items
+        mItems = await Repository.GetAllAsync();
+        mItems = mItems.OrderBy(x => x.Name);
     }
 }

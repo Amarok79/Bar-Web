@@ -5,10 +5,9 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace Bar.Web.Services
+namespace Bar.Web.Services;
+
+public interface IGinRepository
 {
-    public interface IGinRepository
-    {
-        Task<IEnumerable<Gin>> GetAllAsync();
-    }
+    Task<IEnumerable<Gin>> GetAllAsync();
 }

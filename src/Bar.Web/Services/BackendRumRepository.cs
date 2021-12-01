@@ -11,46 +11,46 @@ using Flurl.Http;
 using Microsoft.Extensions.Configuration;
 
 
-namespace Bar.Web.Services
+namespace Bar.Web.Services;
+
+internal sealed class BackendRumRepository : IRumRepository
 {
-    internal sealed class BackendRumRepository : IRumRepository
+    private readonly IHttpClientFactory mHttpClientFactory;
+    private readonly IConfiguration mConfiguration;
+
+
+    public BackendRumRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
-        private readonly IHttpClientFactory mHttpClientFactory;
-        private readonly IConfiguration mConfiguration;
+        mHttpClientFactory = httpClientFactory;
+        mConfiguration     = configuration;
+    }
 
 
-        public BackendRumRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration)
-        {
-            mHttpClientFactory = httpClientFactory;
-            mConfiguration     = configuration;
-        }
+    public async Task<IEnumerable<Rum>> GetAllAsync()
+    {
+        var client = new FlurlClient(mHttpClientFactory.CreateClient());
+        client.BaseUrl = mConfiguration.GetValue<String>("Backend:Url");
+        client.WithHeader("Api-Key", mConfiguration.GetValue<String>("Backend:ApiKey"));
 
+        var items = await client.Request("/api/rums")
+           .GetJsonAsync<RumDto[]>();
 
-        public async Task<IEnumerable<Rum>> GetAllAsync()
-        {
-            var client = new FlurlClient(mHttpClientFactory.CreateClient());
-            client.BaseUrl = mConfiguration.GetValue<String>("Backend:Url");
-            client.WithHeader("Api-Key", mConfiguration.GetValue<String>("Backend:ApiKey"));
+        return items.Select(
+                x => new Rum {
+                    Name   = x.Name,
+                    Teaser = x.Teaser ?? String.Empty,
+                    Images = x.Images ?? Array.Empty<String>(),
+                }
+            )
+           .OrderBy(x => x.Name)
+           .ToList();
+    }
 
-            var items = await client.Request("/api/rums").GetJsonAsync<RumDto[]>();
-
-            return items.Select(
-                    x => new Rum {
-                        Name   = x.Name,
-                        Teaser = x.Teaser ?? String.Empty,
-                        Images = x.Images ?? Array.Empty<String>(),
-                    }
-                )
-               .OrderBy(x => x.Name)
-               .ToList();
-        }
-
-        private sealed class RumDto
-        {
-            public Guid Id { get; set; }
-            public String Name { get; set; } = default!;
-            public String? Teaser { get; set; }
-            public IList<String>? Images { get; set; }
-        }
+    private sealed class RumDto
+    {
+        public Guid Id { get; set; }
+        public String Name { get; set; } = default!;
+        public String? Teaser { get; set; }
+        public IList<String>? Images { get; set; }
     }
 }

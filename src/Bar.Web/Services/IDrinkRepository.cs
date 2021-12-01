@@ -4,16 +4,15 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 
-namespace Bar.Web.Services
+namespace Bar.Web.Services;
+
+/// <summary>
+///     This service provides access to drinks, etc.
+/// </summary>
+public interface IDrinkRepository
 {
     /// <summary>
-    ///     This service provides access to drinks, etc.
+    ///     Gets all Drinks for the given Bar.
     /// </summary>
-    public interface IDrinkRepository
-    {
-        /// <summary>
-        ///     Gets all Drinks for the given Bar.
-        /// </summary>
-        Task<IEnumerable<Drink>> GetAllAsync(BarId barId);
-    }
+    Task<IEnumerable<Drink>> GetAllAsync(BarId barId);
 }

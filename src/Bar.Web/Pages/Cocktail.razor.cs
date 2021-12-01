@@ -7,26 +7,25 @@ using Bar.Web.Services;
 using Microsoft.AspNetCore.Components;
 
 
-namespace Bar.Web.Pages
+namespace Bar.Web.Pages;
+
+partial class Cocktail
 {
-    partial class Cocktail
+    private Drink mDrink;
+
+
+    [Inject]
+    public IDrinkRepository Repository { get; set; }
+
+    [Parameter]
+    public String Key { get; set; }
+
+
+    protected override async Task OnInitializedAsync()
     {
-        private Drink mDrink;
+        var barId = new BarId(Guid.Empty);
 
-
-        [Inject]
-        public IDrinkRepository Repository { get; set; }
-
-        [Parameter]
-        public String Key { get; set; }
-
-
-        protected override async Task OnInitializedAsync()
-        {
-            var barId = new BarId(Guid.Empty);
-
-            var drinks = await Repository.GetAllAsync(barId);
-            mDrink = drinks.FirstOrDefault(x => x.Key.Equals(Key, StringComparison.OrdinalIgnoreCase));
-        }
+        var drinks = await Repository.GetAllAsync(barId);
+        mDrink = drinks.FirstOrDefault(x => x.Key.Equals(Key, StringComparison.OrdinalIgnoreCase));
     }
 }
