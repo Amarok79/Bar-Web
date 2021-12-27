@@ -46,7 +46,7 @@ internal sealed class BackendGinRepository : IGinRepository
            .ToList();
     }
 
-    private sealed class GinDto
+    internal sealed class GinDto
     {
         public Guid Id { get; set; }
         public String Name { get; set; } = default!;

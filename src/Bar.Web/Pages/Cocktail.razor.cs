@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-partial class Cocktail
+public partial class Cocktail
 {
     private Drink mDrink;
 

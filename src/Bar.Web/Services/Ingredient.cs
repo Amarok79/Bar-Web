@@ -1,7 +1,7 @@
 ﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
 
 using System;
-using Amarok.Contracts;
+using CommunityToolkit.Diagnostics;
 
 
 namespace Bar.Web.Services;
@@ -32,9 +32,9 @@ public sealed class Ingredient
     /// </summary>
     public Ingredient(Double amount, String unit, String substance)
     {
-        Verify.IsPositive(amount, nameof(amount));
-        Verify.NotNull(unit, nameof(unit));
-        Verify.NotEmpty(substance, nameof(substance));
+        Guard.IsGreaterThan(amount, 0, nameof(amount));
+        Guard.IsNotNull(unit, nameof(unit));
+        Guard.IsNotEmpty(substance, nameof(substance));
 
         Amount    = amount;
         Unit      = unit;
@@ -46,7 +46,7 @@ public sealed class Ingredient
     /// </summary>
     public Ingredient(String substance)
     {
-        Verify.NotEmpty(substance, nameof(substance));
+        Guard.IsNotEmpty(substance, nameof(substance));
 
         Amount    = null;
         Unit      = null;

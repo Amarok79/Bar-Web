@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-partial class Gins
+public partial class Gins
 {
     private IEnumerable<Gin> mItems;
 

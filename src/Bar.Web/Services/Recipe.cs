@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Amarok.Contracts;
+using CommunityToolkit.Diagnostics;
 
 
 namespace Bar.Web.Services;
@@ -30,8 +30,8 @@ public sealed class Recipe
     /// </summary>
     public Recipe(IReadOnlyList<Ingredient> ingredients, IReadOnlyList<String> instructions)
     {
-        Verify.NotNull(ingredients, nameof(ingredients));
-        Verify.NotNull(instructions, nameof(instructions));
+        Guard.IsNotNull(ingredients, nameof(ingredients));
+        Guard.IsNotNull(instructions, nameof(instructions));
 
         Ingredients  = ingredients;
         Instructions = instructions;

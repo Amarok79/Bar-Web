@@ -46,7 +46,7 @@ internal sealed class BackendRumRepository : IRumRepository
            .ToList();
     }
 
-    private sealed class RumDto
+    internal sealed class RumDto
     {
         public Guid Id { get; set; }
         public String Name { get; set; } = default!;

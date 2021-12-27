@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-partial class GinsPreview
+public partial class GinsPreview
 {
     private IEnumerable<Gin> mItems;
 

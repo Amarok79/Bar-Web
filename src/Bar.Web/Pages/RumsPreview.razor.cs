@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-partial class RumsPreview
+public partial class RumsPreview
 {
     private IEnumerable<Rum> mItems;
 

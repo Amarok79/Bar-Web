@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-partial class Rums
+public partial class Rums
 {
     private IEnumerable<Rum> mItems;
 

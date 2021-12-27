@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Amarok.Contracts;
+using CommunityToolkit.Diagnostics;
 
 
 namespace Bar.Web.Services;
@@ -92,7 +92,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetKey(String key)
     {
-        Verify.NotEmpty(key, nameof(key));
+        Guard.IsNotEmpty(key, nameof(key));
         Key = key;
 
         return this;
@@ -107,7 +107,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetName(String name)
     {
-        Verify.NotEmpty(name, nameof(name));
+        Guard.IsNotEmpty(name, nameof(name));
         Name = name;
 
         return this;
@@ -122,7 +122,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetTeaser(String teaser)
     {
-        Verify.NotNull(teaser, nameof(teaser));
+        Guard.IsNotNull(teaser, nameof(teaser));
         Teaser = teaser;
 
         return this;
@@ -137,7 +137,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetDescription(String description)
     {
-        Verify.NotNull(description, nameof(description));
+        Guard.IsNotNull(description, nameof(description));
         Description = description;
 
         return this;
@@ -166,7 +166,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetRecipe(Recipe recipe)
     {
-        Verify.NotNull(recipe, nameof(recipe));
+        Guard.IsNotNull(recipe, nameof(recipe));
         Recipe = recipe;
 
         return this;
@@ -181,7 +181,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetTags(IEnumerable<String> tags)
     {
-        Verify.NotNull(tags, nameof(tags));
+        Guard.IsNotNull(tags, nameof(tags));
         Tags = tags.ToArray();
 
         return this;
@@ -196,7 +196,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetGlass(String glass)
     {
-        Verify.NotNull(glass, nameof(glass));
+        Guard.IsNotNull(glass, nameof(glass));
         Glass = glass;
 
         return this;
@@ -211,7 +211,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetIce(String ice)
     {
-        Verify.NotNull(ice, nameof(ice));
+        Guard.IsNotNull(ice, nameof(ice));
         Ice = ice;
 
         return this;
@@ -226,7 +226,7 @@ public sealed class Drink : Entity<DrinkId>
     /// </param>
     public Drink SetGarnish(String garnish)
     {
-        Verify.NotNull(garnish, nameof(garnish));
+        Guard.IsNotNull(garnish, nameof(garnish));
         Garnish = garnish;
 
         return this;

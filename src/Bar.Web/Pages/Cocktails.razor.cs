@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-partial class Cocktails
+public partial class Cocktails
 {
     private IEnumerable<Drink> mItems;
 
