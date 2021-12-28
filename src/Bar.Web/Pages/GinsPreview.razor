@@ -2,7 +2,8 @@
 
 <div class="item-container">
     @foreach (var item in mItems) {
-        <Card Image="@(Urls.GetLowResGinImage(item.Image))"
+        <Card ClickAction="@(() => _HandleClicked(item))"
+              Image="@(Urls.GetLowResGinImage(item.Image))"
               SubTitle="@item.Teaser"
               Title="@item.Name">
         </Card>

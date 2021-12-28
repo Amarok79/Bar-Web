@@ -18,6 +18,10 @@ public partial class GinsPreview
     [Inject]
     public IGinRepository Repository { get; set; }
 
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -28,5 +32,11 @@ public partial class GinsPreview
 
         // load and render real items
         mItems = ( await Repository.GetAllAsync() ).TakeRandom(4);
+    }
+
+
+    private void _HandleClicked(Gin item)
+    {
+        NavigationManager.NavigateTo(Urls.GetGinUrl(item));
     }
 }

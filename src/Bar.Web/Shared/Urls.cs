@@ -20,6 +20,12 @@ public static class Urls
         return $"{Cocktails}/{drink.Key}";
     }
 
+    public static String GetGinUrl(Gin gin)
+    {
+        return $"{Gins}/{gin.Id}";
+    }
+
+
     public static String GetLowResDrinkImage(String image)
     {
         return String.IsNullOrEmpty(image)

@@ -1,0 +1,23 @@
+@page "/gins/{id:guid}"
+
+<PageLayout BannerText="@mGin?.Name"
+            BannerVisible="true"
+            HeaderVisible="false">
+
+    <ChildContent>
+
+        <img class="detail-image"
+             src="@(Urls.GetLowResGinImage(mGin?.Image))" />
+
+        <div class="detail-pane-ingredients"
+             hidden="@(String.IsNullOrEmpty(mGin?.Teaser))">
+            <p class="detail-text">@mGin?.Teaser</p>
+        </div>
+
+    </ChildContent>
+
+    <FooterContent>
+        <Navigation />
+    </FooterContent>
+
+</PageLayout>

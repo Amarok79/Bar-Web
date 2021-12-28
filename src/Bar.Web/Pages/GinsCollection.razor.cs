@@ -11,13 +11,16 @@ using Microsoft.AspNetCore.Components;
 
 namespace Bar.Web.Pages;
 
-public partial class Gins
+public partial class GinsCollection
 {
     private IEnumerable<Gin> mItems;
 
 
     [Inject]
     public IGinRepository Repository { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
 
 
     protected override async Task OnInitializedAsync()
@@ -30,5 +33,10 @@ public partial class Gins
         // load and render real items
         mItems = await Repository.GetAllAsync();
         mItems = mItems.OrderBy(x => x.Name);
+    }
+
+    private void _HandleClicked(Gin item)
+    {
+        NavigationManager.NavigateTo(Urls.GetGinUrl(item));
     }
 }
