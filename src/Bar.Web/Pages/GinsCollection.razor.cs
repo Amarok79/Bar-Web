@@ -1,5 +1,7 @@
 ﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
 
+#nullable enable
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +15,14 @@ namespace Bar.Web.Pages;
 
 public partial class GinsCollection
 {
-    private IEnumerable<Gin> mItems;
+    private IEnumerable<Gin>? mItems;
 
 
     [Inject]
-    public IGinRepository Repository { get; set; }
+    public IGinRepository Repository { get; set; } = default!;
 
     [Inject]
-    public NavigationManager NavigationManager { get; set; }
+    public NavigationManager NavigationManager { get; set; } = default!;
 
 
     protected override async Task OnInitializedAsync()

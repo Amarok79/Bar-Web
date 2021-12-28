@@ -1,5 +1,7 @@
 ﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
 
+#nullable enable
+
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,11 +13,11 @@ namespace Bar.Web.Pages;
 
 public partial class GinDetail
 {
-    private Gin mGin;
+    private Gin? mGin;
 
 
     [Inject]
-    public IGinRepository Repository { get; set; }
+    public IGinRepository Repository { get; set; } = default!;
 
     [Parameter]
     public Guid Id { get; set; }
