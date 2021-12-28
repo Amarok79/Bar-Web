@@ -36,15 +36,11 @@
 
 @code
 {
+    private String VersionNumber { get; set; }
 
-    private String VersionNumber {
-        get {
-            var ver = Assembly.GetExecutingAssembly()
-                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                ?.InformationalVersion;
-            return $"Bar-Web v{ver}";
-        }
-    }
+
+    [Inject]
+    public IBackendService BackendService { get; set; }
 
 
     [Parameter]
@@ -68,4 +64,14 @@
     [Parameter, CanBeNull]
     public RenderFragment FooterContent { get; set; }
 
+
+    protected override async Task OnInitializedAsync() {
+        var backendVersion = await BackendService.GetVersion();
+
+        var frontendVersion = Assembly.GetExecutingAssembly()
+            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+            ?.InformationalVersion;
+
+        VersionNumber = $"Bar-Web v{frontendVersion}  |  Bar-Backend v{backendVersion}";
+    }
 }
