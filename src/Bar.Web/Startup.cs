@@ -34,6 +34,7 @@ public class Startup
         services.AddTransient(typeof(IRumRepository), typeof(BackendRumRepository));
         services.AddTransient(typeof(IGinRepository), typeof(BackendGinRepository));
         services.AddTransient(typeof(IDrinkRepository), typeof(LocalDrinkRepository));
+        services.AddTransient(typeof(IBackendService), typeof(BackendService));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
