@@ -37,6 +37,7 @@ internal sealed class BackendGinRepository : IGinRepository
 
         return items.Select(
                 x => new Gin {
+                    Id     = x.Id,
                     Name   = x.Name,
                     Teaser = x.Teaser ?? String.Empty,
                     Images = x.Images ?? Array.Empty<String>(),

@@ -9,6 +9,7 @@ namespace Bar.Web.Services;
 
 public sealed class Gin
 {
+    public Guid Id { get; set; }
     public String Name { get; set; }
     public String Teaser { get; set; }
     public IList<String> Images { get; set; }
