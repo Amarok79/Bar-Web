@@ -2,7 +2,8 @@
 
 <div class="item-container">
     @foreach (var item in mItems) {
-        <Card Image="@(Urls.GetLowResRumImage(item.Image))"
+        <Card ClickAction="@(() => _HandleClicked(item))"
+              Image="@(Urls.GetLowResRumImage(item.Image))"
               SubTitle="@item.Teaser"
               Title="@item.Name">
         </Card>
@@ -11,6 +12,6 @@
 
 <a class="btn btn-dark"
    href="@Urls.Rums"
-   style="margin: 20px 0 0 0">
+   style="margin: 20px 0 40px 0">
     Alle Rums
 </a>

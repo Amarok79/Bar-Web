@@ -27,29 +27,34 @@ public static class Urls
         return $"{Gins}/{gin.Id}";
     }
 
+    public static String GetRumUrl(Rum rum)
+    {
+        return $"{Rums}/{rum.Id}";
+    }
 
-    public static String GetLowResDrinkImage(String image)
+
+    public static String GetLowResDrinkImage(String? image)
     {
         return String.IsNullOrEmpty(image)
             ? "https://amarok.blob.core.windows.net/bar/none.jpg"
             : $"https://amarok.blob.core.windows.net/bar/drink/low/{image}";
     }
 
-    public static String GetHighResDrinkImage(String image)
+    public static String GetHighResDrinkImage(String? image)
     {
         return String.IsNullOrEmpty(image)
             ? "https://amarok.blob.core.windows.net/bar/none.jpg"
             : $"https://amarok.blob.core.windows.net/bar/drink/high/{image}";
     }
 
-    public static String GetLowResGinImage(String image)
+    public static String GetLowResGinImage(String? image)
     {
         return String.IsNullOrEmpty(image)
             ? "https://amarok.blob.core.windows.net/bar/none.jpg"
             : $"https://amarok.blob.core.windows.net/bar/gin/low/{image}";
     }
 
-    public static String GetLowResRumImage(String image)
+    public static String GetLowResRumImage(String? image)
     {
         return String.IsNullOrEmpty(image)
             ? "https://amarok.blob.core.windows.net/bar/none.jpg"

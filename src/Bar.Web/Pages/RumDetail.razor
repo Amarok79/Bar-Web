@@ -1,0 +1,23 @@
+@page "/rums/{id:guid}"
+
+<PageLayout BannerText="@mRum?.Name"
+            BannerVisible="true"
+            HeaderVisible="false">
+
+    <ChildContent>
+
+        <img class="detail-image"
+             src="@(Urls.GetLowResRumImage(mRum?.Image))" />
+
+        <div class="detail-pane-ingredients"
+             hidden="@(String.IsNullOrEmpty(mRum?.Teaser))">
+            <p class="detail-text">@mRum?.Teaser</p>
+        </div>
+
+    </ChildContent>
+
+    <FooterContent>
+        <Navigation />
+    </FooterContent>
+
+</PageLayout>
