@@ -37,6 +37,7 @@ internal sealed class BackendRumRepository : IRumRepository
 
         return items.Select(
                 x => new Rum {
+                    Id     = x.Id,
                     Name   = x.Name,
                     Teaser = x.Teaser ?? String.Empty,
                     Images = x.Images ?? Array.Empty<String>(),

@@ -1,5 +1,7 @@
 ﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
 
+#nullable enable
+
 using System;
 using Bar.Web.Services;
 

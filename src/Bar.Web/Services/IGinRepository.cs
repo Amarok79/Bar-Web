@@ -1,5 +1,7 @@
 ﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
 
+#nullable enable
+
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,7 +9,13 @@ using System.Threading.Tasks;
 
 namespace Bar.Web.Services;
 
+/// <summary>
+///     Represents a repository of Gins.
+/// </summary>
 public interface IGinRepository
 {
+    /// <summary>
+    ///     Gets an unordered collection of all Gins.
+    /// </summary>
     Task<IEnumerable<Gin>> GetAllAsync();
 }
