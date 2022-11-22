@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 using System;
 using System.Diagnostics;
@@ -6,6 +6,7 @@ using System.Globalization;
 
 
 namespace Bar.Web.Services;
+
 
 /// <summary>
 ///     This value type represents the Id of a Drink.
@@ -44,8 +45,7 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     /// </summary>
     public override String ToString()
     {
-        return mGuid.ToString("B", CultureInfo.InvariantCulture)
-           .ToUpperInvariant();
+        return mGuid.ToString("B", CultureInfo.InvariantCulture).ToUpperInvariant();
     }
 
     #endregion

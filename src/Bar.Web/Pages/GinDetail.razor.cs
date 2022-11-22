@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 #nullable enable
 
@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Components;
 
 
 namespace Bar.Web.Pages;
+
 
 public partial class GinDetail
 {

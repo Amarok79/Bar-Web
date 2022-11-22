@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 using System;
 using System.Net.Http;
@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Bar.Web.Services;
 
+
 internal sealed class BackendService : IBackendService
 {
     private readonly IHttpClientFactory mHttpClientFactory;
@@ -18,7 +19,7 @@ internal sealed class BackendService : IBackendService
     public BackendService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
         mHttpClientFactory = httpClientFactory;
-        mConfiguration     = configuration;
+        mConfiguration = configuration;
     }
 
 
@@ -28,8 +29,7 @@ internal sealed class BackendService : IBackendService
         client.BaseUrl = mConfiguration.GetValue<String>("Backend:Url");
         client.WithHeader("Api-Key", mConfiguration.GetValue<String>("Backend:ApiKey"));
 
-        var dto = await client.Request("/api/version")
-           .GetJsonAsync<VersionDto>();
+        var dto = await client.Request("/api/version").GetJsonAsync<VersionDto>();
 
         return dto.ServerVersion;
     }

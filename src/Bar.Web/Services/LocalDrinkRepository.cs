@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 using System;
 using System.Collections.Generic;
@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Hosting;
 
 
 namespace Bar.Web.Services;
+
 
 /// <summary>
 ///     An implementation that loads drinks from a file downloaded from Azure.
@@ -36,29 +37,23 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
 
         if (!fileInfo.Exists)
         {
-            return Array.Empty<Drink>()
-               .AsEnumerable()
-               .AsTask();
+            return Array.Empty<Drink>().AsEnumerable().AsTask();
         }
 
-        return _LoadFromManifest(barId, fileInfo.PhysicalPath)
-           .AsEnumerable()
-           .AsTask();
+        return _LoadFromManifest(barId, fileInfo.PhysicalPath).AsEnumerable().AsTask();
     }
 
 
     private static List<Drink> _LoadFromManifest(BarId barId, String manifestPath)
     {
-        var doc         = XDocument.Load(manifestPath);
+        var doc = XDocument.Load(manifestPath);
         var catalogNode = doc.Element("catalog");
 
         var substances = new Dictionary<String, String>();
 
-        foreach (var substanceNode in catalogNode.Element("substances")
-           .Elements("substance"))
+        foreach (var substanceNode in catalogNode.Element("substances").Elements("substance"))
         {
-            var id = substanceNode.Attribute("id")
-               .Value;
+            var id = substanceNode.Attribute("id").Value;
 
             var name = substanceNode.Value;
 
@@ -67,35 +62,25 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
 
         var drinks = new List<Drink>();
 
-        foreach (var drinkNode in catalogNode.Element("drinks")
-           .Elements("drink"))
+        foreach (var drinkNode in catalogNode.Element("drinks").Elements("drink"))
         {
-            var id = drinkNode.Element("id")
-               .Value;
+            var id = drinkNode.Element("id").Value;
 
-            var name = drinkNode.Element("name")
-               .Value;
+            var name = drinkNode.Element("name").Value;
 
-            var teaser = drinkNode.Element("teaser")
-               .Value;
+            var teaser = drinkNode.Element("teaser").Value;
 
-            var image = drinkNode.Element("image")
-               .Value;
+            var image = drinkNode.Element("image").Value;
 
-            var desc = drinkNode.Element("description")
-               .Value;
+            var desc = drinkNode.Element("description").Value;
 
-            var tags = drinkNode.Element("tags")
-               .Value;
+            var tags = drinkNode.Element("tags").Value;
 
-            var glass = drinkNode.Element("glass")
-              ?.Value;
+            var glass = drinkNode.Element("glass")?.Value;
 
-            var ice = drinkNode.Element("ice")
-              ?.Value;
+            var ice = drinkNode.Element("ice")?.Value;
 
-            var garnish = drinkNode.Element("garnish")
-              ?.Value;
+            var garnish = drinkNode.Element("garnish")?.Value;
 
             var key = _MakeKey(name);
 
@@ -109,8 +94,8 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
                .SetIce(ice?.Trim() ?? String.Empty)
                .SetGarnish(garnish?.Trim() ?? String.Empty);
 
-            Ingredient[] ingredients  = null;
-            String[]     instructions = null;
+            Ingredient[] ingredients = null;
+            String[] instructions = null;
 
             var recipeNode = drinkNode.Element("recipe");
 
@@ -119,34 +104,33 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
                 ingredients = recipeNode.Elements("ingredient")
                    .Select(
                         x => {
-                            var amount = x.Attribute("amount")
-                              ?.Value;
+                            var amount = x.Attribute("amount")?.Value;
 
-                            var unit = x.Attribute("unit")
-                              ?.Value;
+                            var unit = x.Attribute("unit")?.Value;
 
-                            var substance = x.Attribute("substance")
-                               .Value;
+                            var substance = x.Attribute("substance").Value;
 
                             if (substance.StartsWith("@", StringComparison.Ordinal))
                             {
                                 var substanceId = substance[1..];
 
                                 if (substances.TryGetValue(substanceId, out var substanceName))
+                                {
                                     substance = substanceName;
+                                }
                             }
 
                             if (amount == null && unit == null)
+                            {
                                 return new Ingredient(substance);
+                            }
 
                             return new Ingredient(Double.Parse(amount, CultureInfo.InvariantCulture), unit, substance);
                         }
                     )
                    .ToArray();
 
-                instructions = recipeNode.Elements("instruction")
-                   .Select(x => x.Value?.Trim())
-                   .ToArray();
+                instructions = recipeNode.Elements("instruction").Select(x => x.Value?.Trim()).ToArray();
             }
 
             drink.SetRecipe(
@@ -174,7 +158,9 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
     private static String _TrimDescription(String text)
     {
         if (text == null)
+        {
             return String.Empty;
+        }
 
         var lines = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -183,7 +169,9 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
         foreach (var line in lines)
         {
             if (sb.Length > 0)
+            {
                 sb.AppendLine();
+            }
 
             sb.AppendLine(line.Trim());
         }
@@ -194,7 +182,9 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
     private static String[] _SplitAndTrimTags(String text)
     {
         if (text == null)
+        {
             return Array.Empty<String>();
+        }
 
         var tags = text.Split(new[] { '|', ';', ',' }, StringSplitOptions.RemoveEmptyEntries)
            .Select(x => x.Trim())

@@ -1,10 +1,11 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 using System;
 using CommunityToolkit.Diagnostics;
 
 
 namespace Bar.Web.Services;
+
 
 /// <summary>
 ///     This type represents a single Ingredient in a Recipe, e.g. "5 cl Light Rum".
@@ -36,8 +37,8 @@ public sealed class Ingredient
         Guard.IsNotNull(unit, nameof(unit));
         Guard.IsNotEmpty(substance, nameof(substance));
 
-        Amount    = amount;
-        Unit      = unit;
+        Amount = amount;
+        Unit = unit;
         Substance = substance;
     }
 
@@ -48,8 +49,8 @@ public sealed class Ingredient
     {
         Guard.IsNotEmpty(substance, nameof(substance));
 
-        Amount    = null;
-        Unit      = null;
+        Amount = null;
+        Unit = null;
         Substance = substance;
     }
 
@@ -60,7 +61,9 @@ public sealed class Ingredient
     public override String ToString()
     {
         if (Amount.HasValue)
+        {
             return $"{Amount} {Unit} {Substance}";
+        }
 
         return Substance;
     }

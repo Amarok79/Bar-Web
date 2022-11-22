@@ -1,6 +1,7 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 namespace Bar.Web.Services;
+
 
 /// <summary>
 ///     This base class represents an Entity which has a unique Id.

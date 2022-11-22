@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 #nullable enable
 
@@ -10,26 +10,26 @@ using Bar.Web.Services;
 
 namespace Bar.Web.Shared;
 
+
 public static class Utils
 {
     public static IEnumerable<T> TakeRandom<T>(this IEnumerable<T> items, Int32 count)
     {
-        var used   = new List<Int32>();
+        var used = new List<Int32>();
         var result = new List<T>();
         var random = new Random();
-        var total  = items.Count();
+        var total = items.Count();
 
         while (result.Count != count)
         {
             var index = random.Next(total);
 
             if (used.Contains(index))
+            {
                 continue;
+            }
 
-            result.Add(
-                items.Skip(index - 1)
-                   .First()
-            );
+            result.Add(items.Skip(index - 1).First());
 
             used.Add(index);
         }

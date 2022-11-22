@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 #nullable enable
 
@@ -7,6 +7,7 @@ using Bar.Web.Services;
 
 
 namespace Bar.Web.Shared;
+
 
 public static class Urls
 {

@@ -1,4 +1,4 @@
-// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 #nullable enable
 
@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 
 
 namespace Bar.Web;
+
 
 public class Startup
 {
@@ -29,7 +30,10 @@ public class Startup
         services.AddHttpClient();
         services.AddRazorPages();
         services.AddServerSideBlazor();
-        services.AddApplicationInsightsTelemetry(Configuration["APPINSIGHTS_CONNECTIONSTRING"]);
+
+        services.AddApplicationInsightsTelemetry(
+            options => options.ConnectionString = Configuration["ApplicationInsights:ConnectionString"]
+        );
 
         services.AddTransient(typeof(IRumRepository), typeof(BackendRumRepository));
         services.AddTransient(typeof(IGinRepository), typeof(BackendGinRepository));
@@ -40,11 +44,13 @@ public class Startup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         var cultureInfo = CultureInfo.GetCultureInfo("de-AT");
-        CultureInfo.DefaultThreadCurrentCulture   = cultureInfo;
+        CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
         CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
         if (env.IsDevelopment())
+        {
             app.UseDeveloperExceptionPage();
+        }
         else
         {
             app.UseExceptionHandler("/Error");

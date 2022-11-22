@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 using System;
 using System.Collections.Generic;
@@ -7,6 +7,7 @@ using CommunityToolkit.Diagnostics;
 
 
 namespace Bar.Web.Services;
+
 
 /// <summary>
 ///     This type represents a Recipe for a Drink. A Recipe consists of a list of Ingredients and a
@@ -33,7 +34,7 @@ public sealed class Recipe
         Guard.IsNotNull(ingredients, nameof(ingredients));
         Guard.IsNotNull(instructions, nameof(instructions));
 
-        Ingredients  = ingredients;
+        Ingredients = ingredients;
         Instructions = instructions;
     }
 
@@ -48,12 +49,16 @@ public sealed class Recipe
         sb.AppendLine("Ingredients:");
 
         foreach (var ingredient in Ingredients)
+        {
             sb.AppendLine(ingredient.ToString());
+        }
 
         sb.AppendLine("Instructions:");
 
         foreach (var instruction in Instructions)
+        {
             sb.AppendLine(instruction);
+        }
 
         return sb.ToString();
     }

@@ -68,9 +68,7 @@
     protected override async Task OnInitializedAsync() {
         var backendVersion = await BackendService.GetVersion();
 
-        var frontendVersion = Assembly.GetExecutingAssembly()
-            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-            ?.InformationalVersion;
+        var frontendVersion = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
 
         VersionNumber = $"Bar-Web v{frontendVersion}  |  Bar-Backend v{backendVersion}";
     }

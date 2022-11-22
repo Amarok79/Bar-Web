@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2021, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
 
 #nullable enable
 
@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace Bar.Web.Services;
 
+
 internal sealed class BackendRumRepository : IRumRepository
 {
     private readonly IHttpClientFactory mHttpClientFactory;
@@ -22,7 +23,7 @@ internal sealed class BackendRumRepository : IRumRepository
     public BackendRumRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration)
     {
         mHttpClientFactory = httpClientFactory;
-        mConfiguration     = configuration;
+        mConfiguration = configuration;
     }
 
 
@@ -32,13 +33,12 @@ internal sealed class BackendRumRepository : IRumRepository
         client.BaseUrl = mConfiguration.GetValue<String>("Backend:Url");
         client.WithHeader("Api-Key", mConfiguration.GetValue<String>("Backend:ApiKey"));
 
-        var items = await client.Request("/api/rums")
-           .GetJsonAsync<RumDto[]>();
+        var items = await client.Request("/api/rums").GetJsonAsync<RumDto[]>();
 
         return items.Select(
                 x => new Rum {
-                    Id     = x.Id,
-                    Name   = x.Name,
+                    Id = x.Id,
+                    Name = x.Name,
                     Teaser = x.Teaser ?? String.Empty,
                     Images = x.Images ?? Array.Empty<String>(),
                 }
