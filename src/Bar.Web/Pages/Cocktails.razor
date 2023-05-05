@@ -10,7 +10,8 @@
         <p class="item-page-subtitle">Mit frischen Säften und edlen Spirituosen gemixt.</p>
 
         <div class="item-container">
-            @foreach (var item in mItems) {
+            @foreach (var item in mItems)
+            {
                 <Card ClickAction="@(() => _HandleClicked(item))"
                       Image="@(Urls.GetLowResDrinkImage(item.Image))"
                       SubTitle="@item.Teaser"
@@ -21,7 +22,7 @@
     </ChildContent>
 
     <FooterContent>
-        <Navigation />
+        <Navigation/>
     </FooterContent>
 
 </PageLayout>

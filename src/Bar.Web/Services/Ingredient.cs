@@ -31,7 +31,11 @@ public sealed class Ingredient
     /// <summary>
     ///     Initializes a new instance.
     /// </summary>
-    public Ingredient(Double amount, String unit, String substance)
+    public Ingredient(
+        Double amount,
+        String unit,
+        String substance
+    )
     {
         Guard.IsGreaterThan(amount, 0, nameof(amount));
         Guard.IsNotNull(unit, nameof(unit));
@@ -45,7 +49,9 @@ public sealed class Ingredient
     /// <summary>
     ///     Initializes a new instance.
     /// </summary>
-    public Ingredient(String substance)
+    public Ingredient(
+        String substance
+    )
     {
         Guard.IsNotEmpty(substance, nameof(substance));
 

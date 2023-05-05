@@ -15,5 +15,7 @@ public interface IDrinkRepository
     /// <summary>
     ///     Gets all Drinks for the given Bar.
     /// </summary>
-    Task<IEnumerable<Drink>> GetAllAsync(BarId barId);
+    Task<IEnumerable<Drink>> GetAllAsync(
+        BarId barId
+    );
 }

@@ -77,7 +77,10 @@ public sealed class Drink : Entity<DrinkId>
     /// <summary>
     ///     Initializes a new instance.
     /// </summary>
-    public Drink(DrinkId drinkId, BarId barId)
+    public Drink(
+        DrinkId drinkId,
+        BarId barId
+    )
         : base(drinkId)
     {
         BarId = barId;
@@ -91,7 +94,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="key">
     ///     The key of the drink. Neither null nor empty strings are allowed.
     /// </param>
-    public Drink SetKey(String key)
+    public Drink SetKey(
+        String key
+    )
     {
         Guard.IsNotEmpty(key, nameof(key));
         Key = key;
@@ -106,7 +111,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="name">
     ///     The name of the drink. Neither null nor empty strings are allowed.
     /// </param>
-    public Drink SetName(String name)
+    public Drink SetName(
+        String name
+    )
     {
         Guard.IsNotEmpty(name, nameof(name));
         Name = name;
@@ -121,7 +128,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="teaser">
     ///     The teaser of the drink. Null is not allowed.
     /// </param>
-    public Drink SetTeaser(String teaser)
+    public Drink SetTeaser(
+        String teaser
+    )
     {
         Guard.IsNotNull(teaser, nameof(teaser));
         Teaser = teaser;
@@ -136,7 +145,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="description">
     ///     The description of the drink. Null is not allowed.
     /// </param>
-    public Drink SetDescription(String description)
+    public Drink SetDescription(
+        String description
+    )
     {
         Guard.IsNotNull(description, nameof(description));
         Description = description;
@@ -151,7 +162,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="image">
     ///     The image of the drink.
     /// </param>
-    public Drink SetImage(String image)
+    public Drink SetImage(
+        String image
+    )
     {
         Image = image;
 
@@ -165,7 +178,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="recipe">
     ///     The Recipe of the Drink. Null is not allowed.
     /// </param>
-    public Drink SetRecipe(Recipe recipe)
+    public Drink SetRecipe(
+        Recipe recipe
+    )
     {
         Guard.IsNotNull(recipe, nameof(recipe));
         Recipe = recipe;
@@ -180,7 +195,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="tags">
     ///     The tags of the drink. Null is not allowed.
     /// </param>
-    public Drink SetTags(IEnumerable<String> tags)
+    public Drink SetTags(
+        IEnumerable<String> tags
+    )
     {
         Guard.IsNotNull(tags, nameof(tags));
         Tags = tags.ToArray();
@@ -195,7 +212,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="glass">
     ///     The glass of the drink. Null is not allowed.
     /// </param>
-    public Drink SetGlass(String glass)
+    public Drink SetGlass(
+        String glass
+    )
     {
         Guard.IsNotNull(glass, nameof(glass));
         Glass = glass;
@@ -210,7 +229,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="ice">
     ///     The ice of the drink. Null is not allowed.
     /// </param>
-    public Drink SetIce(String ice)
+    public Drink SetIce(
+        String ice
+    )
     {
         Guard.IsNotNull(ice, nameof(ice));
         Ice = ice;
@@ -225,7 +246,9 @@ public sealed class Drink : Entity<DrinkId>
     /// <param name="garnish">
     ///     The garnish of the drink. Null is not allowed.
     /// </param>
-    public Drink SetGarnish(String garnish)
+    public Drink SetGarnish(
+        String garnish
+    )
     {
         Guard.IsNotNull(garnish, nameof(garnish));
         Garnish = garnish;

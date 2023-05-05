@@ -19,13 +19,17 @@ public class Startup
     public IConfiguration Configuration { get; }
 
 
-    public Startup(IConfiguration configuration)
+    public Startup(
+        IConfiguration configuration
+    )
     {
         Configuration = configuration;
     }
 
 
-    public void ConfigureServices(IServiceCollection services)
+    public void ConfigureServices(
+        IServiceCollection services
+    )
     {
         services.AddHttpClient();
         services.AddRazorPages();
@@ -41,7 +45,10 @@ public class Startup
         services.AddTransient(typeof(IBackendService), typeof(BackendService));
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(
+        IApplicationBuilder app,
+        IWebHostEnvironment env
+    )
     {
         var cultureInfo = CultureInfo.GetCultureInfo("de-AT");
         CultureInfo.DefaultThreadCurrentCulture = cultureInfo;

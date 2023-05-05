@@ -2,7 +2,6 @@
 
 #nullable enable
 
-using System;
 using System.Threading.Tasks;
 
 
@@ -11,7 +10,9 @@ namespace Bar.Web.Shared;
 
 public static class TaskExtensions
 {
-    public static Task<T> AsTask<T>(this T obj)
+    public static Task<T> AsTask<T>(
+        this T obj
+    )
     {
         return Task.FromResult(obj);
     }

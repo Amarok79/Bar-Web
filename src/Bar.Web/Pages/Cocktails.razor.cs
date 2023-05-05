@@ -38,7 +38,9 @@ public partial class Cocktails
     }
 
 
-    private void _HandleClicked(Drink item)
+    private void _HandleClicked(
+        Drink item
+    )
     {
         NavigationManager.NavigateTo(Urls.GetCocktailUrl(item));
     }

@@ -22,7 +22,9 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
     private readonly IWebHostEnvironment mWebHostEnvironment;
 
 
-    public LocalDrinkRepository(IWebHostEnvironment webHostEnvironment)
+    public LocalDrinkRepository(
+        IWebHostEnvironment webHostEnvironment
+    )
     {
         mWebHostEnvironment = webHostEnvironment;
     }
@@ -31,7 +33,9 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
     /// <summary>
     ///     Gets all Drinks for the given Bar.
     /// </summary>
-    public Task<IEnumerable<Drink>> GetAllAsync(BarId barId)
+    public Task<IEnumerable<Drink>> GetAllAsync(
+        BarId barId
+    )
     {
         var fileInfo = mWebHostEnvironment.WebRootFileProvider.GetFileInfo("drinks.xml");
 
@@ -44,7 +48,10 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
     }
 
 
-    private static List<Drink> _LoadFromManifest(BarId barId, String manifestPath)
+    private static List<Drink> _LoadFromManifest(
+        BarId barId,
+        String manifestPath
+    )
     {
         var doc = XDocument.Load(manifestPath);
         var catalogNode = doc.Element("catalog");
@@ -85,14 +92,14 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
             var key = _MakeKey(name);
 
             var drink = new Drink(new DrinkId(new Guid(id)), barId).SetName(name.Trim())
-               .SetKey(key)
-               .SetTeaser(teaser.Trim())
-               .SetImage(image)
-               .SetDescription(_TrimDescription(desc))
-               .SetTags(_SplitAndTrimTags(tags))
-               .SetGlass(glass?.Trim() ?? String.Empty)
-               .SetIce(ice?.Trim() ?? String.Empty)
-               .SetGarnish(garnish?.Trim() ?? String.Empty);
+                .SetKey(key)
+                .SetTeaser(teaser.Trim())
+                .SetImage(image)
+                .SetDescription(_TrimDescription(desc))
+                .SetTags(_SplitAndTrimTags(tags))
+                .SetGlass(glass?.Trim() ?? String.Empty)
+                .SetIce(ice?.Trim() ?? String.Empty)
+                .SetGarnish(garnish?.Trim() ?? String.Empty);
 
             Ingredient[] ingredients = null;
             String[] instructions = null;
@@ -102,7 +109,7 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
             if (recipeNode != null)
             {
                 ingredients = recipeNode.Elements("ingredient")
-                   .Select(
+                    .Select(
                         x => {
                             var amount = x.Attribute("amount")?.Value;
 
@@ -128,7 +135,7 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
                             return new Ingredient(Double.Parse(amount, CultureInfo.InvariantCulture), unit, substance);
                         }
                     )
-                   .ToArray();
+                    .ToArray();
 
                 instructions = recipeNode.Elements("instruction").Select(x => x.Value?.Trim()).ToArray();
             }
@@ -143,19 +150,23 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
         return drinks;
     }
 
-    private static String _MakeKey(String name)
+    private static String _MakeKey(
+        String name
+    )
     {
         return name.Replace("  ", " ")
-           .Replace(" ", "-")
-           .Replace("&", "")
-           .Replace("'", "")
-           .Replace("(", "")
-           .Replace(")", "")
-           .Replace("--", "-")
-           .ToLower();
+            .Replace(" ", "-")
+            .Replace("&", "")
+            .Replace("'", "")
+            .Replace("(", "")
+            .Replace(")", "")
+            .Replace("--", "-")
+            .ToLower();
     }
 
-    private static String _TrimDescription(String text)
+    private static String _TrimDescription(
+        String text
+    )
     {
         if (text == null)
         {
@@ -179,7 +190,9 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
         return sb.ToString();
     }
 
-    private static String[] _SplitAndTrimTags(String text)
+    private static String[] _SplitAndTrimTags(
+        String text
+    )
     {
         if (text == null)
         {
@@ -187,8 +200,8 @@ internal sealed class LocalDrinkRepository : IDrinkRepository
         }
 
         var tags = text.Split(new[] { '|', ';', ',' }, StringSplitOptions.RemoveEmptyEntries)
-           .Select(x => x.Trim())
-           .ToArray();
+            .Select(x => x.Trim())
+            .ToArray();
 
         return tags;
     }

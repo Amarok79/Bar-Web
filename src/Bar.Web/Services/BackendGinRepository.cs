@@ -20,7 +20,10 @@ internal sealed class BackendGinRepository : IGinRepository
     private readonly IConfiguration mConfiguration;
 
 
-    public BackendGinRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+    public BackendGinRepository(
+        IHttpClientFactory httpClientFactory,
+        IConfiguration configuration
+    )
     {
         mHttpClientFactory = httpClientFactory;
         mConfiguration = configuration;
@@ -43,8 +46,8 @@ internal sealed class BackendGinRepository : IGinRepository
                     Images = x.Images ?? Array.Empty<String>(),
                 }
             )
-           .OrderBy(x => x.Name)
-           .ToList();
+            .OrderBy(x => x.Name)
+            .ToList();
     }
 
     internal sealed class GinDto

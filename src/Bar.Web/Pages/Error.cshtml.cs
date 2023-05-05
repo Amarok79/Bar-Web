@@ -10,7 +10,8 @@ using Microsoft.Extensions.Logging;
 namespace Bar.Web.Pages;
 
 
-[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true), IgnoreAntiforgeryToken]
+[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+[IgnoreAntiforgeryToken]
 public class ErrorModel : PageModel
 {
     public String RequestId { get; set; }
@@ -19,7 +20,9 @@ public class ErrorModel : PageModel
 
     private readonly ILogger<ErrorModel> mLogger;
 
-    public ErrorModel(ILogger<ErrorModel> logger)
+    public ErrorModel(
+        ILogger<ErrorModel> logger
+    )
     {
         mLogger = logger;
     }

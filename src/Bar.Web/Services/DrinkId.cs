@@ -33,7 +33,9 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     /// <param name="guid">
     ///     The Guid that should be wrapped.
     /// </param>
-    public DrinkId(Guid guid)
+    public DrinkId(
+        Guid guid
+    )
     {
         mGuid = guid;
     }
@@ -72,7 +74,9 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     /// <returns>
     ///     True, if the specified instance is equal to the current instance; otherwise, False.
     /// </returns>
-    public override Boolean Equals(Object obj)
+    public override Boolean Equals(
+        Object obj
+    )
     {
         return obj is DrinkId id && Equals(id);
     }
@@ -88,7 +92,9 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     /// <returns>
     ///     True, if the specified instance is equal to the current instance; otherwise, False.
     /// </returns>
-    public Boolean Equals(DrinkId other)
+    public Boolean Equals(
+        DrinkId other
+    )
     {
         // determine equality from fields
         return mGuid.Equals(other.mGuid);
@@ -109,7 +115,10 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     /// <returns>
     ///     True, if the specified instances are equal; otherwise, False.
     /// </returns>
-    public static Boolean operator ==(DrinkId a, DrinkId b)
+    public static Boolean operator ==(
+        DrinkId a,
+        DrinkId b
+    )
     {
         return a.Equals(b);
     }
@@ -128,7 +137,10 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     /// <returns>
     ///     True, if the specified instances are unequal; otherwise, False.
     /// </returns>
-    public static Boolean operator !=(DrinkId a, DrinkId b)
+    public static Boolean operator !=(
+        DrinkId a,
+        DrinkId b
+    )
     {
         return !a.Equals(b);
     }

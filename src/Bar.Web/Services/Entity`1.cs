@@ -17,7 +17,9 @@ public abstract class Entity<TId>
     /// <summary>
     ///     Initializes a new instance.
     /// </summary>
-    protected Entity(TId id)
+    protected Entity(
+        TId id
+    )
     {
         Id = id;
     }

@@ -46,26 +46,32 @@
     [Parameter]
     public Boolean HeaderVisible { get; set; } = true;
 
-    [Parameter, CanBeNull]
+    [Parameter]
+    [CanBeNull]
     public String HeaderText { get; set; } = "Die \"KroKo\" Hausbar";
 
-    [Parameter, CanBeNull]
+    [Parameter]
+    [CanBeNull]
     public String HeaderSubText { get; set; } = "Cocktails und Drinks für Freunde und Gäste";
 
     [Parameter]
     public Boolean BannerVisible { get; set; } = false;
 
-    [Parameter, CanBeNull]
+    [Parameter]
+    [CanBeNull]
     public String BannerText { get; set; }
 
-    [Parameter, CanBeNull]
+    [Parameter]
+    [CanBeNull]
     public RenderFragment ChildContent { get; set; }
 
-    [Parameter, CanBeNull]
+    [Parameter]
+    [CanBeNull]
     public RenderFragment FooterContent { get; set; }
 
 
-    protected override async Task OnInitializedAsync() {
+    protected override async Task OnInitializedAsync()
+    {
         var backendVersion = await BackendService.GetVersion();
 
         var frontendVersion = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;

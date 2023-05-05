@@ -1,7 +1,7 @@
 ﻿<div class="item"
      @onclick="@(() => ClickAction?.Invoke())">
     <img class="item-image @ImageClickableStyle"
-         src="@Image" />
+         src="@Image"/>
     <div class="item-footer">
         <p class="item-title">@Title</p>
         <p class="item-subtitle">@SubTitle</p>
@@ -20,7 +20,8 @@
     [Parameter]
     public String SubTitle { get; set; }
 
-    [Parameter, CanBeNull]
+    [Parameter]
+    [CanBeNull]
     public Action ClickAction { get; set; }
 
 

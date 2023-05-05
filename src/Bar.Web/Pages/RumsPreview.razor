@@ -1,7 +1,8 @@
 ﻿<p class="preview-title">Unsere Rums</p>
 
 <div class="item-container">
-    @foreach (var item in mItems) {
+    @foreach (var item in mItems)
+    {
         <Card ClickAction="@(() => _HandleClicked(item))"
               Image="@(Urls.GetLowResRumImage(item.Image))"
               SubTitle="@item.Teaser"

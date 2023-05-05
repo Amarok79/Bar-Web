@@ -2,7 +2,6 @@
 
 #nullable enable
 
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Bar.Web.Services;
@@ -38,7 +37,9 @@ public partial class GinsPreview
     }
 
 
-    private void _HandleClicked(Gin item)
+    private void _HandleClicked(
+        Gin item
+    )
     {
         NavigationManager.NavigateTo(Urls.GetGinUrl(item));
     }

@@ -16,7 +16,10 @@ internal sealed class BackendService : IBackendService
     private readonly IConfiguration mConfiguration;
 
 
-    public BackendService(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+    public BackendService(
+        IHttpClientFactory httpClientFactory,
+        IConfiguration configuration
+    )
     {
         mHttpClientFactory = httpClientFactory;
         mConfiguration = configuration;

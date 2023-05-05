@@ -10,7 +10,8 @@
         <p class="item-page-subtitle">Pur, On the Rocks oder mit Premium Tonic Water.</p>
 
         <div class="item-container">
-            @foreach (var item in mItems) {
+            @foreach (var item in mItems)
+            {
                 <Card ClickAction="@(() => _HandleClicked(item))"
                       Image="@(Urls.GetLowResGinImage(item.Image))"
                       SubTitle="@item.Teaser"
@@ -21,7 +22,7 @@
     </ChildContent>
 
     <FooterContent>
-        <Navigation />
+        <Navigation/>
     </FooterContent>
 
 </PageLayout>

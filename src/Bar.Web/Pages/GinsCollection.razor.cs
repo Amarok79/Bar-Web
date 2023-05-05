@@ -2,7 +2,6 @@
 
 #nullable enable
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -38,7 +37,9 @@ public partial class GinsCollection
         mItems = mItems.OrderBy(x => x.Name);
     }
 
-    private void _HandleClicked(Gin item)
+    private void _HandleClicked(
+        Gin item
+    )
     {
         NavigationManager.NavigateTo(Urls.GetGinUrl(item));
     }

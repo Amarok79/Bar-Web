@@ -29,7 +29,10 @@ public sealed class Recipe
     /// <summary>
     ///     Initializes a new instance.
     /// </summary>
-    public Recipe(IReadOnlyList<Ingredient> ingredients, IReadOnlyList<String> instructions)
+    public Recipe(
+        IReadOnlyList<Ingredient> ingredients,
+        IReadOnlyList<String> instructions
+    )
     {
         Guard.IsNotNull(ingredients, nameof(ingredients));
         Guard.IsNotNull(instructions, nameof(instructions));

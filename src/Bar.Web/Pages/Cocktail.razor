@@ -7,13 +7,14 @@
     <ChildContent>
 
         <img class="detail-image"
-             src="@(Urls.GetLowResDrinkImage(mDrink.Image))" />
+             src="@(Urls.GetLowResDrinkImage(mDrink.Image))"/>
 
         <div class="detail-pane-ingredients"
              hidden="@(mDrink.Recipe.Ingredients.Count == 0)">
             <p class="detail-title">Rezeptur</p>
             <table>
-                @foreach (var ingredient in mDrink.Recipe.Ingredients) {
+                @foreach (var ingredient in mDrink.Recipe.Ingredients)
+                {
                     <tr>
                         <td class="detail-ingredient-amount">@ingredient.Amount</td>
                         <td class="detail-ingredient-unit">@ingredient.Unit</td>
@@ -48,7 +49,8 @@
              hidden="@(mDrink.Recipe.Instructions.Count == 0)">
             <p class="detail-title">Arbeitsschritte</p>
             <ol>
-                @foreach (var instruction in mDrink.Recipe.Instructions) {
+                @foreach (var instruction in mDrink.Recipe.Instructions)
+                {
                     <li class="detail-instructions-item">@instruction</li>
                 }
             </ol>
@@ -63,7 +65,7 @@
     </ChildContent>
 
     <FooterContent>
-        <Navigation />
+        <Navigation/>
     </FooterContent>
 
 </PageLayout>

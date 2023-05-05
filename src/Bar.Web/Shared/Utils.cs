@@ -13,7 +13,10 @@ namespace Bar.Web.Shared;
 
 public static class Utils
 {
-    public static IEnumerable<T> TakeRandom<T>(this IEnumerable<T> items, Int32 count)
+    public static IEnumerable<T> TakeRandom<T>(
+        this IEnumerable<T> items,
+        Int32 count
+    )
     {
         var used = new List<Int32>();
         var result = new List<T>();
@@ -37,17 +40,23 @@ public static class Utils
         return result;
     }
 
-    public static IEnumerable<Drink> CreateEmptyDrinks(Int32 count = 4)
+    public static IEnumerable<Drink> CreateEmptyDrinks(
+        Int32 count = 4
+    )
     {
         return Enumerable.Repeat(new Drink(default, default), count);
     }
 
-    public static IEnumerable<Gin> CreateEmptyGins(Int32 count = 4)
+    public static IEnumerable<Gin> CreateEmptyGins(
+        Int32 count = 4
+    )
     {
         return Enumerable.Repeat(new Gin(), count);
     }
 
-    public static IEnumerable<Rum> CreateEmptyRums(Int32 count = 4)
+    public static IEnumerable<Rum> CreateEmptyRums(
+        Int32 count = 4
+    )
     {
         return Enumerable.Repeat(new Rum(), count);
     }

@@ -20,7 +20,10 @@ internal sealed class BackendRumRepository : IRumRepository
     private readonly IConfiguration mConfiguration;
 
 
-    public BackendRumRepository(IHttpClientFactory httpClientFactory, IConfiguration configuration)
+    public BackendRumRepository(
+        IHttpClientFactory httpClientFactory,
+        IConfiguration configuration
+    )
     {
         mHttpClientFactory = httpClientFactory;
         mConfiguration = configuration;
@@ -43,8 +46,8 @@ internal sealed class BackendRumRepository : IRumRepository
                     Images = x.Images ?? Array.Empty<String>(),
                 }
             )
-           .OrderBy(x => x.Name)
-           .ToList();
+            .OrderBy(x => x.Name)
+            .ToList();
     }
 
     internal sealed class RumDto

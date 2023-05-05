@@ -2,7 +2,6 @@
 
 #nullable enable
 
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Bar.Web.Services;
@@ -37,7 +36,9 @@ public partial class RumsPreview
     }
 
 
-    private void _HandleClicked(Rum item)
+    private void _HandleClicked(
+        Rum item
+    )
     {
         NavigationManager.NavigateTo(Urls.GetRumUrl(item));
     }
