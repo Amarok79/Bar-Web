@@ -1,0 +1,57 @@
+name: CD
+
+on:
+  workflow_run:
+    workflows: [ CI ]
+    types: [ completed ]
+    branches: [ main ]
+
+concurrency:
+  group: production-environment
+
+jobs:
+  
+  deploy:
+    name: "Deploy"
+    runs-on: windows-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      
+      - name: Get sources
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Get .NET 7.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 7.0.x
+
+      - name: Restore packages
+        run: dotnet restore
+
+      - name: Restore tools
+        run: dotnet tool restore
+ 
+      - name: Setup Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+      - name: Bump version
+        id: versionize
+        run: dotnet versionize --ignore-insignificant-commits
+
+      - name: Build Release
+        run: dotnet build -c Release
+
+      - name: Publish to Production
+        run: dotnet publish -c Release --no-build --no-self-contained /p:PublishProfile=Production.pubxml /p:Password="${{ secrets.DEPLOY_PASSWORD_PRODUCTION }}"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          tags: true
