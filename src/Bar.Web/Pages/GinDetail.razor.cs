@@ -1,10 +1,5 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
-#nullable enable
-
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using Bar.Web.Services;
 using Microsoft.AspNetCore.Components;
 

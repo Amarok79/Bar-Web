@@ -1,9 +1,7 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
-#nullable enable
+#nullable disable
 
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Bar.Web.Services;
 using Bar.Web.Shared;
 using Microsoft.AspNetCore.Components;
@@ -14,7 +12,7 @@ namespace Bar.Web.Pages;
 
 public partial class RumsPreview
 {
-    private IEnumerable<Rum>? mItems;
+    private IEnumerable<Rum> mItems;
 
 
     [Inject]

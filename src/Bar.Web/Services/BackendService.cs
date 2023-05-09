@@ -1,10 +1,9 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+#nullable disable
+
+
 using Flurl.Http;
-using Microsoft.Extensions.Configuration;
 
 
 namespace Bar.Web.Services;

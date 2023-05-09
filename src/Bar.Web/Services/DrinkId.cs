@@ -1,6 +1,5 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
-using System;
 using System.Diagnostics;
 using System.Globalization;
 
@@ -75,7 +74,7 @@ public readonly struct DrinkId : IEquatable<DrinkId>
     ///     True, if the specified instance is equal to the current instance; otherwise, False.
     /// </returns>
     public override Boolean Equals(
-        Object obj
+        Object? obj
     )
     {
         return obj is DrinkId id && Equals(id);

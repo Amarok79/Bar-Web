@@ -7,10 +7,10 @@
     <ChildContent>
 
         <img class="detail-image"
-             src="@(Urls.GetLowResDrinkImage(mDrink.Image))"/>
+             src="@(Urls.GetLowResDrinkImage(mDrink?.Image))"/>
 
         <div class="detail-pane-ingredients"
-             hidden="@(mDrink.Recipe.Ingredients.Count == 0)">
+             hidden="@(mDrink!.Recipe.Ingredients.Count == 0)">
             <p class="detail-title">Rezeptur</p>
             <table>
                 @foreach (var ingredient in mDrink.Recipe.Ingredients)

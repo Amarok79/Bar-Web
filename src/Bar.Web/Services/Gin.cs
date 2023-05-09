@@ -1,11 +1,4 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
-
-#nullable enable
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
 namespace Bar.Web.Services;
 

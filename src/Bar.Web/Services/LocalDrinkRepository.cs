@@ -1,14 +1,12 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
-using System;
-using System.Collections.Generic;
+#nullable disable
+
+
 using System.Globalization;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using Bar.Web.Shared;
-using Microsoft.AspNetCore.Hosting;
 
 
 namespace Bar.Web.Services;

@@ -1,9 +1,4 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
-
-#nullable enable
-
-using System.Threading.Tasks;
-
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
 namespace Bar.Web.Shared;
 

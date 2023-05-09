@@ -1,11 +1,4 @@
-// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
-
-#nullable enable
-
-using System;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
-
+// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
 namespace Bar.Web;
 

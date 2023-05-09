@@ -1,8 +1,4 @@
-﻿// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
-
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
+﻿// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
 namespace Bar.Web.Services;
 

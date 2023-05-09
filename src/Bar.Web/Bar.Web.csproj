@@ -2,9 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <OutputPath>..\..\bin\app\</OutputPath>
-        <Nullable>disable</Nullable>
         <UserSecretsId>1f3112d4-b310-417f-89cc-2a21620da825</UserSecretsId>
         <ApplicationInsightsResourceId>/subscriptions/41707fe0-4695-4325-9518-8324cebdb7f4/resourceGroups/cachaca/providers/microsoft.insights/components/Bar-Web</ApplicationInsightsResourceId>
     </PropertyGroup>

@@ -1,14 +1,7 @@
-// Copyright (c) 2022, Olaf Kober <olaf.kober@outlook.com>
-
-#nullable enable
+// Copyright (c) 2023, Olaf Kober <olaf.kober@outlook.com>
 
 using System.Globalization;
 using Bar.Web.Services;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 
 namespace Bar.Web;
