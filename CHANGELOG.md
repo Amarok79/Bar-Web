@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.3"></a>
+## [1.10.3](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.3) (2023-5-12)
+
+### Other
+
+* Enable CORS, disable HSTS ([7a6b368](https://www.github.com/Amarok79/Bar-Web/commit/7a6b368fe609a43cae4446e6310783cf6a3b64cf))
+
 <a name="1.10.2"></a>
 ## [1.10.2](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.2) (2023-5-12)
 
