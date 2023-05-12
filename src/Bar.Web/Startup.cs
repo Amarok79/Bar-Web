@@ -28,6 +28,10 @@ public class Startup
         services.AddRazorPages();
         services.AddServerSideBlazor();
 
+        services.AddCors(options => options.AddDefaultPolicy(builder =>
+            builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
+        ));
+
         services.AddApplicationInsightsTelemetry(
             options => options.ConnectionString = Configuration["ApplicationInsights:ConnectionString"]
         );
@@ -54,13 +58,13 @@ public class Startup
         else
         {
             app.UseExceptionHandler("/Error");
-            app.UseHsts();
         }
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
 
         app.UseRouting();
+        app.UseCors();
 
         app.UseEndpoints(
             endpoints => {
