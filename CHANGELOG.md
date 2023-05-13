@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.6"></a>
+## [1.10.6](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.6) (2023-5-13)
+
+### Other
+
+* Remove legacy (web) deployment ([3a9fe8f](https://www.github.com/Amarok79/Bar-Web/commit/3a9fe8f3adc415c58c58ce0126c8f893f087de80))
+
 <a name="1.10.5"></a>
 ## [1.10.5](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.5) (2023-5-13)
 
