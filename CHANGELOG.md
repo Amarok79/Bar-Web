@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.8"></a>
+## [1.10.8](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.8) (2023-5-29)
+
+### Other
+
+* Improved layout a bit ([54677dd](https://www.github.com/Amarok79/Bar-Web/commit/54677ddc7d3a4773df012c2691d52253c2319914))
+
 <a name="1.10.7"></a>
 ## [1.10.7](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.7) (2023-5-29)
 
