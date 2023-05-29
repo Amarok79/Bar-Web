@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.7"></a>
+## [1.10.7](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.7) (2023-5-29)
+
+### Other
+
+* Remove AppInsights ([97f76b7](https://www.github.com/Amarok79/Bar-Web/commit/97f76b7783d84b79c1ace31a7cf818b8877a72bd))
+
 <a name="1.10.6"></a>
 ## [1.10.6](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.6) (2023-5-13)
 
