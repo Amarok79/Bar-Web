@@ -31,7 +31,7 @@ public partial class CocktailsPreview
 
         // load and render real items
         var id = new BarId(Guid.Empty);
-        mItems = ( await Repository.GetAllAsync(id) ).TakeRandom(4);
+        mItems = ( await Repository.GetAllAsync(id) ).TakeRandom(3);
     }
 
 

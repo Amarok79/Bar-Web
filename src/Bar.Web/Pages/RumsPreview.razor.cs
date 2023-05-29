@@ -30,7 +30,7 @@ public partial class RumsPreview
         await Task.Delay(50);
 
         // load and render real items
-        mItems = ( await Repository.GetAllAsync() ).TakeRandom(4);
+        mItems = ( await Repository.GetAllAsync() ).TakeRandom(3);
     }
 
 

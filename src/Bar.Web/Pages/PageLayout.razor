@@ -1,4 +1,6 @@
 ﻿@using System.Reflection
+@inject IBackendService BackendService
+
 <div class="page">
 
     <header class="header">
@@ -39,10 +41,6 @@
 #nullable disable
 
     private String VersionNumber { get; set; }
-
-
-    [Inject]
-    public IBackendService BackendService { get; set; }
 
 
     [Parameter]

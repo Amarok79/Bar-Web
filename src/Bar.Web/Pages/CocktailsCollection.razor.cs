@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Components;
 namespace Bar.Web.Pages;
 
 
-public partial class Cocktails
+public partial class CocktailsCollection
 {
     private IEnumerable<Drink> mItems;
 
