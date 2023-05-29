@@ -32,10 +32,6 @@ public class Startup
             builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()
         ));
 
-        services.AddApplicationInsightsTelemetry(
-            options => options.ConnectionString = Configuration["ApplicationInsights:ConnectionString"]
-        );
-
         services.AddTransient(typeof(IRumRepository), typeof(BackendRumRepository));
         services.AddTransient(typeof(IGinRepository), typeof(BackendGinRepository));
         services.AddTransient(typeof(IDrinkRepository), typeof(LocalDrinkRepository));
@@ -62,7 +58,6 @@ public class Startup
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
-
         app.UseRouting();
         app.UseCors();
 
