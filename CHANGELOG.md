@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.12"></a>
+## [1.10.12](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.12) (2023-8-5)
+
+### Other
+
+* Bump appleboy/ssh-action from 0.1.10 to 1.0.0 (#4) ([72760fe](https://www.github.com/Amarok79/Bar-Web/commit/72760fe43f4e62a9215fb94c774fa47e4ba41053))
+
 <a name="1.10.11"></a>
 ## [1.10.11](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.11) (2023-8-5)
 
