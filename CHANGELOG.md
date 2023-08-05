@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.11"></a>
+## [1.10.11](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.11) (2023-8-5)
+
+### Other
+
+* Add Git ignore for Rider ([8eb7072](https://www.github.com/Amarok79/Bar-Web/commit/8eb7072a0729a0f90763a77ba0a020930163d6a8))
+* Update packages ([8103f40](https://www.github.com/Amarok79/Bar-Web/commit/8103f40d16c31eb043e8e9a7623122ba3bcc100e))
+
 <a name="1.10.10"></a>
 ## [1.10.10](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.10) (2023-6-7)
 
