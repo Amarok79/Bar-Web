@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+<a name="1.10.13"></a>
+## [1.10.13](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.13) (2023-8-5)
+
+### Other
+
+* Refresh editor config ([2706788](https://www.github.com/Amarok79/Bar-Web/commit/270678813137deab0d7ce0f9ae4b279c2a6bcf8f))
+
 <a name="1.10.12"></a>
 ## [1.10.12](https://www.github.com/Amarok79/Bar-Web/releases/tag/v1.10.12) (2023-8-5)
 
